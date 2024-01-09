@@ -14,10 +14,22 @@ const Navbar = ({
   sendDataToParent,
 }: NavbarProps) => {
   const [isVerticalNav, setIsVerticalNav] = useState(true);
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
       setIsVerticalNav(window.scrollY <= 150);
+
+      // Récupérer toutes les sections
+      const sections = document.querySelectorAll("section");
+      // Parcourir les sections pour vérifier quelle est visible
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 150;
+        const sectionBottom = sectionTop + section.clientHeight;
+        if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+          setActiveSection(section.id);
+        }
+      });
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -31,15 +43,29 @@ const Navbar = ({
     sendDataToParent(isVerticalNav);
   }, [isVerticalNav, sendDataToParent]);
 
-  const smoothEffect = "hover:-translate-y-0.5 transition ease-in-out duration-50";
+  const smoothEffect =
+    "hover:-translate-y-0.5 transition ease-in-out duration-50";
 
-  const renderSectionLink = (sectionId: string, textFr: string, textEn: string, iconClass: string) => {
+  const renderSectionLink = (
+    sectionId: string,
+    textFr: string,
+    textEn: string,
+    iconClass: string
+  ) => {
     return (
-      <span onClick={() => scrollToSection(sectionId)} className={`cursor-pointer mr-3 ${smoothEffect}`}>
+      <span
+        onClick={() => scrollToSection(sectionId)}
+        className={`cursor-pointer mr-3 ${smoothEffect}`}
+      >
         {isVerticalNav ? (
           <span>{lang === "fr" ? textFr : textEn}</span>
         ) : (
-          <i className={`fi ${iconClass} text-white text-3xl`}></i>
+          <i
+            className={`fi ${iconClass}  text-3xl ${
+              activeSection === sectionId ? "text-yellow-500" : "text-gray-600"
+            }`}
+            title={lang === "fr" ? textFr : textEn}
+          ></i>
         )}
       </span>
     );
@@ -55,8 +81,8 @@ const Navbar = ({
     <nav
       className={`fixed flex justify-between p-3 font-bold uppercase w-full ${
         isVerticalNav
-          ? "bg-white text-gray-800"
-          : "bg-gray-700/95 text-white md:flex-col md:w-auto md:h-full transition-all duration-1000 ease-in-out"
+          ? "bg-white text-gray-800 transition-all duration-1000 ease-in-out"
+          : "bg-gray-800/95 text-gray-600 md:flex-col md:w-auto md:h-full transition-all duration-1000 ease-in-out"
       }`}
     >
       <span
@@ -65,17 +91,47 @@ const Navbar = ({
       >
         logo
       </span>
-      <div className={`anchorTagContainer flex ${isVerticalNav ? "" : "w-18 flex-col"}`}>
-        <div>{renderSectionLink("projects", "projets", "projects", "fi-rr-apps")}</div>
-        <div>{renderSectionLink("skills", "compétences", "skills", "fi-rr-settings")}</div>
-        <div>{renderSectionLink("top", "expériences", "experiences", "fi-rr-build-alt")}</div>
+      <div
+        className={`anchorTagContainer flex ${
+          isVerticalNav ? "" : "w-18 flex-col items-end"
+        }`}
+      >
+        <div>
+          {renderSectionLink("projects", "projets", "projects", "fi-rr-apps")}
+        </div>
+        <div>
+          {renderSectionLink(
+            "skills",
+            "compétences",
+            "skills",
+            "fi-rr-settings"
+          )}
+        </div>
+        <div>
+          {renderSectionLink(
+            "experiences",
+            "expériences",
+            "experiences",
+            "fi-rr-build-alt"
+          )}
+        </div>
       </div>
       <div className={smoothEffect}>
-        <span onClick={() => changeLanguage("fr")} className={lang === "an" ? "cursor-pointer font-light" : "cursor-default"}>
+        <span
+          onClick={() => changeLanguage("fr")}
+          className={
+            lang === "an" ? "cursor-pointer font-light" : "cursor-default"
+          }
+        >
           FR
         </span>
         <span className="cursor-default">/</span>
-        <span onClick={() => changeLanguage("an")} className={lang === "fr" ? "cursor-pointer font-light" : "cursor-default"}>
+        <span
+          onClick={() => changeLanguage("an")}
+          className={
+            lang === "fr" ? "cursor-pointer font-light" : "cursor-default"
+          }
+        >
           EN
         </span>
       </div>

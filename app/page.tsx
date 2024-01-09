@@ -126,6 +126,13 @@ export default function Home() {
           >
             <Skills lang={lang} />
           </section>
+          <div className="border-2 border-naplesYellow w-full "></div>
+          <section
+            id="experiences"
+            className="mx-auto min-h-[38rem] md:w-5/6 item-center flex flex-col md:flex-row gap-10 justify-center"
+          >
+            <Skills lang={lang} />
+          </section>
         </div>
       </div>
     </main>
