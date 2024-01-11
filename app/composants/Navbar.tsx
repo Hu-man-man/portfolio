@@ -69,9 +69,7 @@ const Navbar = ({
   const AnchorTagContainer = () => (
     <>
       <div
-        className={`flex flex-col gap-5 md:flex-row ${
-          isVisible ? "*:border-t" : ""
-        }`}
+        className={`flex flex-col gap-5 md:flex-row`}
       >
         <div className={smoothEffect}>
           {renderSectionLink("projects", "projets", "projects")}
@@ -103,7 +101,7 @@ const Navbar = ({
     <div className="fixed w-full h-full">
       <nav
         className={`flex justify-between p-4 font-bold uppercase bg-gray-800/5 backdrop-blur-md ${
-          isVerticalNav? "" : "bg-mintGreen/85 shadow "
+          !isVisible && isVerticalNav ? "" : "bg-mintGreen/85 shadow "
         }w-full text-black `}
       >
         <span
@@ -147,9 +145,7 @@ const Navbar = ({
         </span>
       </nav>
       <div
-        className={`fixed right-0 flex flex-col text-right font-bold uppercase bg-gray-800/5 backdrop-blur-md ${
-          isVerticalNav? "" : "bg-mintGreen/85 shadow "
-        } text-white h-auto w-auto md:hidden transition-all duration-50 ease-in-out ${
+        className={`fixed right-0 flex flex-col text-right font-bold uppercase backdrop-blur-md bg-mintGreen/85 shadow text-white h-auto w-auto md:hidden transition-all duration-50 ease-in-out ${
           activeSection !== "theMan" ? "" : "text-gray-600 "
         } ${isVisible ? "p-3 py-7" : ""}`}
       >

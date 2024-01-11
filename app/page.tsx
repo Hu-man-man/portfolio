@@ -85,7 +85,7 @@ export default function Home() {
               </p>
             </div>
           </section>
-          <div className="border-2 border-naplesYellow w-full"></div>
+          <div className="border-2 w-full m-5"></div>
           <section
             id="projects"
             className="mx-auto min-h-[38rem] item-center flex flex-col gap-10 justify-center"
@@ -120,14 +120,14 @@ export default function Home() {
               </a>
             </div>
           </section>
-          <div className="border-2 border-naplesYellow w-full "></div>
+          <div className="border-2 w-full m-5"></div>
           <section
             id="skills"
             className="mx-auto min-h-[38rem] md:w-5/6 item-center flex flex-col md:flex-row gap-10 justify-center"
           >
             <Skills lang={lang} />
           </section>
-          <div className="border-2 border-naplesYellow w-full "></div>
+          <div className="border-2 w-full m-5"></div>
           <section
             id="experiences"
             className="mx-auto min-h-[38rem] md:w-5/6 item-center flex flex-col md:flex-row gap-10 justify-center"
