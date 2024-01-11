@@ -9,11 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        cobaltBlue: '#1446a0',
-        razzmatazz: '#db3069',
-        naplesYellow: '#f5d547',
-        beige: '#ebebd3',
-        onix: '#3c3c3b',
+        mintGreen: '#cffffb',
       },
     },
 

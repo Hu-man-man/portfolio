@@ -103,7 +103,7 @@ const Navbar = ({
     <div className="fixed w-full h-full">
       <nav
         className={`flex justify-between p-4 font-bold uppercase bg-gray-800/5 backdrop-blur-md ${
-          isVerticalNav? "" : "bg-[#cffffb]/80 shadow "
+          isVerticalNav? "" : "bg-mintGreen/85 shadow "
         }w-full text-black `}
       >
         <span
@@ -148,7 +148,7 @@ const Navbar = ({
       </nav>
       <div
         className={`fixed right-0 flex flex-col text-right font-bold uppercase bg-gray-800/5 backdrop-blur-md ${
-          isVerticalNav? "" : "bg-[#cffffb]/80 shadow "
+          isVerticalNav? "" : "bg-mintGreen/85 shadow "
         } text-white h-auto w-auto md:hidden transition-all duration-50 ease-in-out ${
           activeSection !== "theMan" ? "" : "text-gray-600 "
         } ${isVisible ? "p-3 py-7" : ""}`}
