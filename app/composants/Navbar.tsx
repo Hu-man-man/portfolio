@@ -135,7 +135,7 @@ const Navbar = ({
             EN
           </span>
         </div>
-        <span className="md:hidden origin-center rotate-90">
+        <span className="md:hidden origin-center rotate-90 text-2xl">
           <i
             className={
               isVisible ? "fi fi-rr-cross text-[#ED7D3A]" : "fi fi-rr-tally-4"
