@@ -42,7 +42,7 @@ const Skills = ({ lang }: SkillsProps) => {
         <p className="text-center md:text-left">
           {lang === "fr"
             ? "Accedente ut et et ignobiles et quod et inserunt et ut obscuros adsueti et et quod inserunt venditare quod lucris eruditos inutiles enim venditare inserunt et prandiis accedente mercede infaustos et ignobiles et et accedente obscuros et obscuros et obscuros mercede enim haec adsueti venditare nomenclatores et vitant inutiles vitant."
-            : "Accedente ut et et ignobiles et quod et inserunt et ut obscuros adsueti et et quod inserunt venditare quod lucris eruditos inutiles enim venditare inserunt et prandiis accedente mercede infaustos et ignobiles et et accedente obscuros et obscuros et obscuros mercede enim haec adsueti venditare nomenclatores et vitant inutiles vitant."}
+            : "Apollinares locum nulla Crateras multorum nulla nulla in lapide ambo non Antiochia constaret Crateras in Apollinares. Crateras pervenissent quae occiduntur in dilatata levius multorum igitur et quae mandatum nulla Apollinares levius nomine filius ad clades et constaret exilium post ambo mandatum fortunas quarto Antiochia."}
         </p>
       </div>
       <div className="flex items-center justify-center md:w-2/3">

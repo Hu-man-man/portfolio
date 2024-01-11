@@ -10,14 +10,14 @@ export default function Home() {
   type Language = "fr" | "an";
 
   const [lang, setLang] = useState<Language>("fr");
-  const [isVertNav, setIsVertNav] = useState<boolean>(false);
+  const [isVisibleNav, setIsVisibleNav] = useState<boolean>(false);
 
   const handleSwitchLanguage = (selectedLang: Language): void => {
     setLang(selectedLang);
   };
 
-  const handleSetIsVertNav = (isVertNav: boolean) => {
-    setIsVertNav(isVertNav);
+  const handleSetIsVisibleNav = (isVisibleNav: boolean) => {
+    setIsVisibleNav(isVisibleNav);
   };
 
   const scrollToSection = (id: string) => {
@@ -38,17 +38,18 @@ export default function Home() {
 
   return (
     <main>
-      <div className={`flex flex-col`}>
+      <div>
+        
         <Navbar
           lang={lang}
           scrollToSection={scrollToSection}
           handleSwitchLanguage={handleSwitchLanguage}
-          sendDataToParent={handleSetIsVertNav}
+          sendDataToParent={handleSetIsVisibleNav}
         />
-        <div className={`mainContent flex flex-col w-full items-center justify-center ${isVertNav ? '' : 'transition-all duration-1000 ease-in-out md:pl-20'}`}>
+        <div className={`mainContent flex flex-col w-full items-center justify-center`}>
           <section
-            id="theMan"
             className="mx-auto min-h-[38rem] md:w-3/4 item-center flex flex-col md:flex-row gap-10 justify-center"
+            id="theMan"
           >
             <div className="flex md:w-1/3 items-center justify-center">
               <Image
@@ -84,7 +85,7 @@ export default function Home() {
               </p>
             </div>
           </section>
-          <div className="border-2 border-naplesYellow w-full "></div>
+          <div className="border-2 border-naplesYellow w-full"></div>
           <section
             id="projects"
             className="mx-auto min-h-[38rem] item-center flex flex-col gap-10 justify-center"
