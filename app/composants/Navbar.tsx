@@ -44,6 +44,8 @@ const Navbar = ({
     sendDataToParent(isVisible);
   }, [isVisible, sendDataToParent]);
 
+  
+
   const smoothEffect =
     "hover:-translate-y-0.5 transition ease-in-out duration-50";
 
