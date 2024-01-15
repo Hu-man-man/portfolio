@@ -17,7 +17,7 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
       id: "trello",
       url: "https://trello-clone-nu-neon.vercel.app/",
       imageSrc: "/static/images/screen-trello.png",
-      alt: "realy bad picture of Jason",
+      alt: "screenshot de l'application clone trello",
       description:
         "Application en React clone de Trello. Exercice d'entrainement avec la technologie TypeScript, et le glissé déposé",
     },
@@ -38,17 +38,17 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
         "Application en React pour le front-end et express pour le back-end. Exercice d'entrainement pour coder avec next.js, faire une interface adaptative et travailler avec une api",
     },
     {
-      id: "myMoviz",
-      url: "https://mymoviz-front-zeta.vercel.app/",
-      imageSrc: "/static/images/screen-myMoviz.png",
-      alt: "screenshot de l'application My Moviz",
-      description:
-        "Application en React pour le front-end et express pour le back-end. Exercice d'entrainement pour coder avec next.js, faire une interface adaptative et travailler avec une api",
+      id: "portfolio",
+      url: "https://portfolio-mu-ten-80.vercel.app/",
+      imageSrc: "/static/images/screen-portfolio.png",
+      alt: "screenshot de l'application porfolio",
+      description: "Application utilisant Next js. Interface adaptative.",
     },
   ];
 
   const handleDescription = (event: DescType) => {
     setAppDescription(event);
+    alert(projectsData.find((project) => project.id === event)?.url);
   };
 
   const handleProjectsVisible = () => {
@@ -61,14 +61,15 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
       <div className="title text-center">
         Projects: Here are some of my recent projects:
       </div>
-      <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-5 w-screen">
+      <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-5 ">
+        {/* w-screen */}
         {projectsData
           .slice(0, projectsVisible ? 2 : projectsData.length)
           .map((project) => (
             <div
               key={project.id}
-            //   href={project.url}
-            //   target="_blank"
+              //   href={project.url}
+              //   target="_blank"
               className={`flex justify-center align-center aspect-[3/2] rounded-xl overflow-hidden bg-white grow-0 basis-1/3 max-w-80 min-h-[220px] md:min-h-0`}
               onClick={() => handleDescription(project.id as DescType)}
             >

@@ -57,7 +57,7 @@ export default function Home() {
           <div className="border-2 w-full m-5"></div>
           <section
             id="projects"
-            className="mx-auto min-h-[38rem] item-center flex flex-col gap-10 justify-center pt-20"
+            className="mx-auto min-h-[38rem] item-center flex flex-col gap-10 md:w-5/6 justify-center pt-20"
           >
             <Projects lang={lang} scrollToSection={scrollToSection} />
           </section>
