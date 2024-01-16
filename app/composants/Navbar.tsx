@@ -100,7 +100,7 @@ const Navbar = ({
   };
 
   return (
-    <div className="fixed w-full">
+    <div className="fixed w-full z-10">
       <nav
         className={`flex justify-between p-4 font-bold uppercase bg-gray-800/5 backdrop-blur-md ${
           !isVisible && isVerticalNav ? "" : "bg-mintGreen/85 shadow "

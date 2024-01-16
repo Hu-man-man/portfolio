@@ -17,6 +17,11 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
           rel="stylesheet"
           href="https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
         />
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-rounded/css/uicons-solid-rounded.css'></link>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react-modal/3.14.3/react-modal.min.js"
+   integrity="sha512-MY2jfK3DBnVzdS2V8MXo5lRtr0mNRroUI9hoLVv2/yL3vrJTam3VzASuKQ96fLEpyYIT4a8o7YgtUs5lPjiLVQ=="
+   crossorigin="anonymous"
+   referrerpolicy="no-referrer"></script> 
       </head>
       <body className={inter.className}>{children}</body>
     </html>

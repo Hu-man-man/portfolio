@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
+import ProjectModal from "./ProjectModal"
 
 type ProjectsProps = {
   lang: "fr" | "an";
@@ -15,6 +16,7 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
   const projectsData = [
     {
       id: "trello",
+      name: "Clone de Trello",
       url: "https://trello-clone-nu-neon.vercel.app/",
       imageSrc: "/static/images/screen-trello.png",
       alt: "screenshot de l'application clone trello",
@@ -23,6 +25,7 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
     },
     {
       id: "fdm",
+      name: "La ferme de Meyrenal",
       url: "https://www.youtube.com/playlist?list=PLbaOVmckgD0P3bAD0lUh3JMLpL4Xlk4vT",
       imageSrc: "/static/images/screen-LFDM.png",
       alt: "screenshot de l'application la ferme de Meyreinal",
@@ -31,6 +34,7 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
     },
     {
       id: "myMoviz",
+      name: "My Moviz",
       url: "https://mymoviz-front-zeta.vercel.app/",
       imageSrc: "/static/images/screen-myMoviz.png",
       alt: "screenshot de l'application My Moviz",
@@ -39,6 +43,7 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
     },
     {
       id: "portfolio",
+      name: "Mon Portfolio",
       url: "https://portfolio-mu-ten-80.vercel.app/",
       imageSrc: "/static/images/screen-portfolio.png",
       alt: "screenshot de l'application porfolio",
@@ -48,7 +53,6 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
 
   const handleDescription = (event: DescType) => {
     setAppDescription(event);
-    alert(projectsData.find((project) => project.id === event)?.url);
   };
 
   const handleProjectsVisible = () => {
@@ -58,11 +62,10 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
 
   return (
     <>
-      <div className="title text-center">
-        Projects: Here are some of my recent projects:
+      <div className="title text-center text-xl font-bold">
+        Projets: Voici quelques'uns de mes projest récents:
       </div>
       <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-5 ">
-        {/* w-screen */}
         {projectsData
           .slice(0, projectsVisible ? 2 : projectsData.length)
           .map((project) => (
@@ -70,7 +73,7 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
               key={project.id}
               //   href={project.url}
               //   target="_blank"
-              className={`flex justify-center align-center aspect-[3/2] rounded-xl overflow-hidden bg-white grow-0 basis-1/3 max-w-80 min-h-[220px] md:min-h-0`}
+              className={`flex justify-center align-center aspect-[3/2] rounded-xl overflow-hidden bg-white grow-0 basis-1/3 max-w-80 min-h-[220px] md:min-h-0 relative`}
               onClick={() => handleDescription(project.id as DescType)}
             >
               <Image
@@ -81,16 +84,13 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
                 layout="responsive"
                 className="object-contain"
               />
+              <div className="bg-[#ED7D3A]/70 backdrop-blur-sm inset-0 absolute flex flex-col justify-center items-center gap-6 text-white opacity-0 hover:opacity-100 transition ease-in-out duration-700">
+                <h2 className="text-xl font-bold">{project.name}</h2>
+                {/* <i className="text-5xl fi fi-sr-add opacity-50 hover:opacity-100 hover:animate-pulse "></i> */}
+                <ProjectModal project={project}/>
+              </div>              
             </div>
           ))}
-      </div>
-      <div className="mt-4 text-center mx-6">
-        <p className="text-lg">
-          {appDescription !== null
-            ? projectsData.find((project) => project.id === appDescription)
-                ?.description
-            : "Cliquez sur les images pour avoir plus d'informations"}
-        </p>
       </div>
       <div className="w-full flex justify-center">
         <button
