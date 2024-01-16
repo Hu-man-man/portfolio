@@ -25,7 +25,7 @@ const ProjectModal = ({ project }: ProjectModalProps) => {
   };
 
   return (
-    <div>
+    <div className="relative">
       <i
         className="text-5xl fi fi-sr-add opacity-50 hover:opacity-100 hover:animate-pulse "
         onClick={handleOpenModal}
@@ -37,16 +37,16 @@ const ProjectModal = ({ project }: ProjectModalProps) => {
         onRequestClose={handleCloseModal}
         shouldCloseOnOverlayClick={true}
         ariaHideApp={true} // Remove if you don't need to hide the app from screen readers
-        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/3 h-96 bg-white rounded-lg outline-0"
+        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/3 min-h-96 bg-white rounded-lg outline-0"
       >
         <div className="flex justify-between text-xl p-5">
           <h2>{project.name}</h2>
           <i className="fi fi-rr-cross" onClick={handleCloseModal}></i>
         </div>
         <div>
-          <div className="flex justify-center items-center gap-10">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-10">
             <div
-              className={`flex justify-center align-center aspect-[3/2] rounded-xl overflow-hidden bg-white grow-0 basis-1/3 max-w-80 min-h-[220px] md:min-h-0 relative pl-10`}
+              className={`hidden md:flex justify-center align-center aspect-[3/2] rounded-xl overflow-hidden bg-white grow-0 basis-1/3 max-w-80 min-h-[220px] md:min-h-0 relative pl-10 `}
             >
               <Image
                 src={project.imageSrc}

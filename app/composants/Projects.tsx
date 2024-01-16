@@ -71,8 +71,6 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
           .map((project) => (
             <div
               key={project.id}
-              //   href={project.url}
-              //   target="_blank"
               className={`flex justify-center align-center aspect-[3/2] rounded-xl overflow-hidden bg-white grow-0 basis-1/3 max-w-80 min-h-[220px] md:min-h-0 relative`}
               onClick={() => handleDescription(project.id as DescType)}
             >
@@ -86,8 +84,7 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
               />
               <div className="bg-[#ED7D3A]/70 backdrop-blur-sm inset-0 absolute flex flex-col justify-center items-center gap-6 text-white opacity-0 hover:opacity-100 transition ease-in-out duration-700">
                 <h2 className="text-xl font-bold">{project.name}</h2>
-                {/* <i className="text-5xl fi fi-sr-add opacity-50 hover:opacity-100 hover:animate-pulse "></i> */}
-                <ProjectModal project={project}/>
+                <ProjectModal project={project}  />
               </div>              
             </div>
           ))}
