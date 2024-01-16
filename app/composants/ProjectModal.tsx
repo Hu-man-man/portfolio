@@ -57,12 +57,12 @@ const ProjectModal = ({ project }: ProjectModalProps) => {
                 className="object-contain"
               />
             </div>
-            <div className='flex flex-col w-2/3 pr-10 gap-10'>
+            <div className='flex flex-col md:w-2/3 md:pr-10 gap-10'>
             <p>{project.description}</p>
             <a
               href={project.url}
               target="_blank"
-              className="text-6xl font-bold"
+              className="text-6xl sm:text-lg font-bold"
               onClick={handleCloseModal}
             >
               LINK
