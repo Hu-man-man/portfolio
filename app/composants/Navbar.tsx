@@ -151,7 +151,7 @@ const Navbar = ({
           activeSection !== "theMan" ? "" : "text-gray-600 "
         } ${isVisible ? "p-3 py-7" : ""}`}
       >
-        {/*isVisible &&*/ <AnchorTagContainer />}
+        {isVisible && <AnchorTagContainer />}
       </div>
     </div>
   );
