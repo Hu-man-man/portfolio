@@ -62,7 +62,7 @@ const ProjectModal = ({ project }: ProjectModalProps) => {
             <a
               href={project.url}
               target="_blank"
-              className="text-6xl sm:text-lg font-bold"
+              className="md:text-6xl text-lg font-bold"
               onClick={handleCloseModal}
             >
               LINK

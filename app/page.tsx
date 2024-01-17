@@ -52,14 +52,7 @@ export default function Home() {
             className="mx-auto min-h-[38rem] md:w-3/4 item-center flex flex-col md:flex-row gap-10 justify-center pt-20"
             id="theMan"
           >
-            <HomePage lang={lang} />
-          </section>
-          <div className="border-2 w-full m-5"></div>
-          <section
-            id="projects"
-            className="mx-auto min-h-[38rem] item-center flex flex-col gap-10 md:w-5/6 justify-center pt-20"
-          >
-            <Projects lang={lang} scrollToSection={scrollToSection} />
+            <HomePage lang={lang} scrollToSection={scrollToSection} />
           </section>
           <div className="border-2 w-full m-5"></div>
           <section
@@ -67,6 +60,13 @@ export default function Home() {
             className="mx-auto min-h-[38rem] md:w-5/6 item-center flex flex-col md:flex-row gap-10 justify-center pt-20"
           >
             <Skills lang={lang} />
+          </section>
+          <div className="border-2 w-full m-5"></div>
+          <section
+            id="projects"
+            className="mx-auto min-h-[38rem] item-center flex flex-col gap-10 md:w-5/6 justify-center pt-20"
+          >
+            <Projects lang={lang} scrollToSection={scrollToSection} />
           </section>
           <div className="border-2 w-full m-5"></div>
           <section

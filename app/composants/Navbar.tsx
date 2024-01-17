@@ -74,10 +74,10 @@ const Navbar = ({
         className={`flex flex-col gap-5 md:flex-row`}
       >
         <div className={smoothEffect}>
-          {renderSectionLink("projects", "projets", "projects")}
+          {renderSectionLink("skills", "compétences", "skills")}
         </div>
         <div className={smoothEffect}>
-          {renderSectionLink("skills", "compétences", "skills")}
+          {renderSectionLink("projects", "projets", "projects")}
         </div>
         <div className={smoothEffect}>
           {renderSectionLink("experiences", "expériences", "experiences")}
@@ -151,7 +151,7 @@ const Navbar = ({
           activeSection !== "theMan" ? "" : "text-gray-600 "
         } ${isVisible ? "p-3 py-7" : ""}`}
       >
-        {isVisible && <AnchorTagContainer />}
+        {/*isVisible &&*/ <AnchorTagContainer />}
       </div>
     </div>
   );
