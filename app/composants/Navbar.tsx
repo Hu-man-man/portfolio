@@ -80,9 +80,6 @@ const Navbar = ({
           {renderSectionLink("projects", "projets", "projects")}
         </div>
         <div className={smoothEffect}>
-          {renderSectionLink("experiences", "expériences", "experiences")}
-        </div>
-        <div className={smoothEffect}>
           {renderSectionLink("contacts", "contacts", "contacts")}
         </div>
       </div>
@@ -108,10 +105,10 @@ const Navbar = ({
       >
         <span
           className={`cursor-pointer ${smoothEffect} pl-1 tracking-tighter text-2xl ${
-            activeSection === "theMan" ? "text-[#ED7D3A]" : ""
+            activeSection === "homePage" ? "text-[#ED7D3A]" : ""
           }
           `}
-          onClick={() => scrollToSection("theMan")}
+          onClick={() => scrollToSection("homePage")}
         >
           {"jsn"}
         </span>
@@ -148,7 +145,7 @@ const Navbar = ({
       </nav>
       <div
         className={`fixed right-0 flex flex-col text-right font-bold uppercase backdrop-blur-md bg-mintGreen/85 shadow text-white h-auto w-auto md:hidden transition-all duration-50 ease-in-out ${
-          activeSection !== "theMan" ? "" : "text-gray-600 "
+          activeSection !== "homePage" ? "" : "text-gray-600 "
         } ${isVisible ? "p-3 py-7" : ""}`}
       >
         {isVisible && <AnchorTagContainer />}

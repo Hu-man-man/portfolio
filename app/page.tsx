@@ -3,8 +3,9 @@
 import { useState } from "react";
 import Navbar from "./composants/Navbar";
 import HomePage from "./composants/HomePage";
-import Projects from "./composants/Projects"
+import Projects from "./composants/Projects";
 import Skills from "./composants/Skills";
+import Contacts from "./composants/Contacts";
 
 
 export default function Home() {
@@ -50,7 +51,7 @@ export default function Home() {
         <div className={`mainContent flex flex-col w-full items-center justify-center`}>
           <section
             className="mx-auto min-h-[38rem] md:w-3/4 item-center flex flex-col md:flex-row gap-10 justify-center pt-20"
-            id="theMan"
+            id="homePage"
           >
             <HomePage lang={lang} scrollToSection={scrollToSection} />
           </section>
@@ -70,10 +71,10 @@ export default function Home() {
           </section>
           <div className="border-2 w-full m-5"></div>
           <section
-            id="experiences"
+            id="contacts"
             className="mx-auto min-h-[38rem] md:w-5/6 item-center flex flex-col md:flex-row gap-10 justify-center pt-20"
           >
-            <Skills lang={lang} />
+            <Contacts lang={lang} scrollToSection={scrollToSection} />
           </section>
         </div>
       </div>
