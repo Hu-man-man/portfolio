@@ -16,24 +16,22 @@ const HomePage = ({ lang, scrollToSection }: HomePageProps) => {
           height={100}
         />
       </div>
-      <div className="flex flex-col md:w-2/3 items-center justify-center">
+      <div className="flex flex-col md:w-2/3 items-center justify-center ">
         <div>
-          <div className="text-center md:text-left ">
+          <div className="text-center md:text-left">
             {lang === "fr" ? (
               <>
-                <h2 className="font-bold text-3xl">
-                  Bienvenue sur mon Portfolio
-                </h2>
+                <h1 className="font-bold text-3xl">Hey !</h1>
                 <br />
 
-                <p>
-                  Je m'appelle Jason Ricou et je suis développeur full-stack
-                  spécialisé en JavaScript et en Réact.{" "}
+                <p className="font-bold text-2xl">
+                  Je suis Jason, développeur Full-Stack et vous êtes les
+                  bienvenus sur mon portfolio.
                 </p>
-                <p>
+                {/* <p>
                   Investi, Souriant et Super motivé, laissez moi apporter mes
                   compétences et mon énergie à vos projets !
-                </p>
+                </p> */}
               </>
             ) : (
               <>
@@ -47,14 +45,20 @@ const HomePage = ({ lang, scrollToSection }: HomePageProps) => {
             )}
           </div>
         </div>
+        <div className="flex w-full">
           <a
-            className="bg-white p-4  rounded-xl cursor-pointer my-10"
+            className="bg-white p-4  rounded-full cursor-pointer my-10 border-3 border-black"
             onClick={() => {
               scrollToSection("projects");
             }}
           >
             Mes projets
           </a>
+        </div>
+        
+        
+        
+        
       </div>
     </>
   );

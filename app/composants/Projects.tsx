@@ -62,8 +62,8 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
 
   return (
     <>
-      <div className="title text-center text-xl font-bold">
-        Projets: Voici quelques'uns de mes projest récents:
+      <div className="title text-center text-2xl font-bold">
+        Voici quelques'uns de mes projets récents:
       </div>
       <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-5 ">
         {projectsData

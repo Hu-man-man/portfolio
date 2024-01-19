@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import DeveloppementBand from "./DeveloppementBand";
 
 type NavbarProps = {
   lang: "fr" | "an";
@@ -44,8 +45,6 @@ const Navbar = ({
     sendDataToParent(isVisible);
   }, [isVisible, sendDataToParent]);
 
-  
-
   const smoothEffect =
     "hover:-translate-y-0.5 transition ease-in-out duration-50";
 
@@ -58,9 +57,7 @@ const Navbar = ({
       <span
         onClick={() => scrollToSection(sectionId)}
         className={`cursor-pointer mr-3 ${
-          activeSection === sectionId
-            ? "text-[#ED7D3A]"
-            : "text-gray-600"
+          activeSection === sectionId ? "text-[#ED7D3A]" : "text-gray-600"
         }`}
       >
         {lang === "fr" ? textFr : textEn}
@@ -70,9 +67,7 @@ const Navbar = ({
 
   const AnchorTagContainer = () => (
     <>
-      <div
-        className={`flex flex-col gap-5 md:flex-row`}
-      >
+      <div className={`flex flex-col gap-5 md:flex-row md:items-center `}>
         <div className={smoothEffect}>
           {renderSectionLink("skills", "compétences", "skills")}
         </div>
@@ -98,6 +93,7 @@ const Navbar = ({
 
   return (
     <div className="fixed w-full z-10">
+      <DeveloppementBand />
       <nav
         className={`flex justify-between p-4 font-bold uppercase bg-gray-800/5 backdrop-blur-md ${
           !isVisible && isVerticalNav ? "" : "bg-mintGreen/85 shadow "
@@ -112,7 +108,7 @@ const Navbar = ({
         >
           {"jsn"}
         </span>
-        <div className={`hidden md:flex`}>
+        <div className={`hidden md:flex `}>
           <AnchorTagContainer />
         </div>
         <div className={smoothEffect}>
