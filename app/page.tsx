@@ -58,7 +58,7 @@ export default function Home() {
           <div className="border-2 w-full m-5"></div>
           <section
             id="skills"
-            className="mx-auto min-h-[38rem] md:w-5/6 item-center flex flex-col md:flex-row gap-10 justify-center pt-20"
+            className="mx-auto min-h-[38rem]  item-center flex flex-col md:w-5/6 md:flex-row gap-10 justify-center pt-20"
           >
             <Skills lang={lang} />
           </section>

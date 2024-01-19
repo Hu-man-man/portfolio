@@ -33,7 +33,7 @@ const Contacts: React.FC<ContactsProps> = ({ lang, scrollToSection }) => {
   return (
     <div className="flex flex-col items-center justify-center gap-12">
       <a
-        className={`cursor-pointer tracking-tighter text-5xl font-bold uppercase hover:text-[#ED7D3A]`}
+        className={`cursor-pointer tracking-tighter text-5xl font-bold uppercase hover:text-[#ED7D3A] major`}
         onClick={() => scrollToSection("homePage")}
       >
         {"jsn"}

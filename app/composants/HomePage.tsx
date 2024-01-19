@@ -21,17 +21,12 @@ const HomePage = ({ lang, scrollToSection }: HomePageProps) => {
           <div className="text-center md:text-left">
             {lang === "fr" ? (
               <>
-                <h1 className="font-bold text-3xl">Hey !</h1>
+                <h1 className="font-bold text-4xl major">HEY !</h1>
                 <br />
 
-                <p className="font-bold text-2xl">
-                  Je suis Jason, développeur Full-Stack et vous êtes les
-                  bienvenus sur mon portfolio.
+                <p className="font-bold text-2xl italic">
+                  {'<< Je suis Jason, développeur Full-Stack et vous êtes les bienvenus sur mon portfolio. >>'}
                 </p>
-                {/* <p>
-                  Investi, Souriant et Super motivé, laissez moi apporter mes
-                  compétences et mon énergie à vos projets !
-                </p> */}
               </>
             ) : (
               <>
@@ -47,7 +42,7 @@ const HomePage = ({ lang, scrollToSection }: HomePageProps) => {
         </div>
         <div className="flex w-full">
           <a
-            className="bg-white p-4  rounded-full cursor-pointer my-10 border-3 border-black"
+            className="bg-white p-4  rounded-full cursor-pointer my-10 border-3 border-black major"
             onClick={() => {
               scrollToSection("projects");
             }}

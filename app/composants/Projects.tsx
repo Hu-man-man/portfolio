@@ -89,7 +89,7 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
             </div>
           ))}
       </div>
-      <div className="w-full flex justify-center">
+      <div className="w-full flex justify-center major">
         <button
           className="bg-white p-4  rounded-xl"
           onClick={() => handleProjectsVisible()}

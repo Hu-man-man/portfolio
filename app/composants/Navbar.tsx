@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import DeveloppementBand from "./DeveloppementBand";
+import DeveloppementBand from './DeveloppementBand';
 
 type NavbarProps = {
   lang: "fr" | "an";
@@ -45,6 +45,8 @@ const Navbar = ({
     sendDataToParent(isVisible);
   }, [isVisible, sendDataToParent]);
 
+  
+
   const smoothEffect =
     "hover:-translate-y-0.5 transition ease-in-out duration-50";
 
@@ -57,7 +59,9 @@ const Navbar = ({
       <span
         onClick={() => scrollToSection(sectionId)}
         className={`cursor-pointer mr-3 ${
-          activeSection === sectionId ? "text-[#ED7D3A]" : "text-gray-600"
+          activeSection === sectionId
+            ? "text-[#ED7D3A]"
+            : "text-gray-600"
         }`}
       >
         {lang === "fr" ? textFr : textEn}
@@ -67,15 +71,17 @@ const Navbar = ({
 
   const AnchorTagContainer = () => (
     <>
-      <div className={`flex flex-col gap-5 md:flex-row md:items-center `}>
+      <div
+        className={`flex flex-col gap-5 md:flex-row md:items-center `}
+      >
         <div className={smoothEffect}>
-          {renderSectionLink("skills", "compétences", "skills")}
+          {renderSectionLink("skills", "Compétences", "Skills")}
         </div>
         <div className={smoothEffect}>
-          {renderSectionLink("projects", "projets", "projects")}
+          {renderSectionLink("projects", "Projets", "Projects")}
         </div>
         <div className={smoothEffect}>
-          {renderSectionLink("contacts", "contacts", "contacts")}
+          {renderSectionLink("contacts", "Contacts", "Contacts")}
         </div>
       </div>
     </>
@@ -92,12 +98,12 @@ const Navbar = ({
   };
 
   return (
-    <div className="fixed w-full z-10">
+    <div className="fixed w-full z-10 ">
       <DeveloppementBand />
       <nav
-        className={`flex justify-between p-4 font-bold uppercase bg-gray-800/5 backdrop-blur-md ${
+        className={`flex justify-between p-4 font-bold bg-gray-800/5 backdrop-blur-md major ${
           !isVisible && isVerticalNav ? "" : "bg-mintGreen/85 shadow "
-        }w-full text-black `}
+        } w-full text-black `}
       >
         <span
           className={`cursor-pointer ${smoothEffect} pl-1 tracking-tighter text-2xl ${
@@ -106,7 +112,7 @@ const Navbar = ({
           `}
           onClick={() => scrollToSection("homePage")}
         >
-          {"jsn"}
+          {"JSN"}
         </span>
         <div className={`hidden md:flex `}>
           <AnchorTagContainer />
@@ -115,19 +121,19 @@ const Navbar = ({
           <span
             onClick={() => changeLanguage("fr")}
             className={
-              lang === "an" ? "cursor-pointer font-light" : "cursor-default"
+              lang === "an" ? "cursor-pointer font-light" : "cursor-default uppercase"
             }
           >
-            FR
+            fr
           </span>
           <span className="cursor-default">/</span>
           <span
             onClick={() => changeLanguage("an")}
             className={
-              lang === "fr" ? "cursor-pointer font-light" : "cursor-default"
+              lang === "fr" ? "cursor-pointer font-light" : "cursor-default uppercase"
             }
           >
-            EN
+            en
           </span>
         </div>
         <span className="md:hidden origin-center rotate-90 text-2xl">
