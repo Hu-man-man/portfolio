@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import ProjectModal from "./ProjectModal"
+import PersonnalisedButton from "./PersonnalisedButton"
 
 type ProjectsProps = {
   lang: "fr" | "an";
@@ -60,10 +61,23 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
     setProjectsVisible(!projectsVisible);
   };
 
+  const textButton = (<>
+   <i
+            className={`fi fi-rr-chevron-double-${
+              projectsVisible ? "down" : "up"
+            } items-center mr-2`}
+          ></i>
+          {projectsVisible ? "Plus" : "Moins"} de projets
+          <i
+            className={`fi fi-rr-chevron-double-${
+              projectsVisible ? "down" : "up"
+            } ml-2`}
+          ></i></>)
+
   return (
     <>
-      <div className="title text-center text-2xl font-bold">
-        Voici quelques'uns de mes projets récents:
+      <div className="title text-center text-2xl font-bold major">
+        Quelques projets récents:
       </div>
       <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-5 ">
         {projectsData
@@ -71,7 +85,7 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
           .map((project) => (
             <div
               key={project.id}
-              className={`flex justify-center align-center aspect-[3/2] rounded-xl overflow-hidden bg-white grow-0 basis-1/3 max-w-80 min-h-[220px] md:min-h-0 relative`}
+              className={`flex justify-center align-center aspect-[3/2] rounded-xl overflow-hidden bg-white border border-black grow-0 basis-1/3 max-w-80 min-h-[220px] md:min-h-0 relative`}
               onClick={() => handleDescription(project.id as DescType)}
             >
               <Image
@@ -89,23 +103,12 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
             </div>
           ))}
       </div>
-      <div className="w-full flex justify-center major">
-        <button
-          className="bg-white p-4  rounded-xl"
+      <div className="w-full flex justify-center major items-center">
+        <div
           onClick={() => handleProjectsVisible()}
         >
-          <i
-            className={`fi fi-rr-chevron-double-${
-              projectsVisible ? "down" : "up"
-            }`}
-          ></i>{" "}
-          {projectsVisible ? "Plus" : "Moins"} de projets{" "}
-          <i
-            className={`fi fi-rr-chevron-double-${
-              projectsVisible ? "down" : "up"
-            }`}
-          ></i>
-        </button>
+         <PersonnalisedButton buttonText={textButton} />
+        </div>
       </div>
     </>
   );

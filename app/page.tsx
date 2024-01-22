@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Navbar from "./composants/Navbar";
-import HomePage from "./composants/HomePage";
+import Hero from "./composants/Hero";
 import Projects from "./composants/Projects";
 import Skills from "./composants/Skills";
 import Contacts from "./composants/Contacts";
@@ -50,29 +50,29 @@ export default function Home() {
         />
         <div className={`mainContent flex flex-col w-full items-center justify-center`}>
           <section
-            className="mx-auto min-h-[38rem] md:w-3/4 item-center flex flex-col md:flex-row gap-10 justify-center pt-20"
-            id="homePage"
+            className="mx-auto min-h-[38rem] md:w-3/4 item-center flex flex-col md:flex-row gap-10 justify-center py-20"
+            id="Hero"
           >
-            <HomePage lang={lang} scrollToSection={scrollToSection} />
+            <Hero lang={lang} scrollToSection={scrollToSection} />
           </section>
           <div className="border-2 w-full m-5"></div>
           <section
             id="skills"
-            className="mx-auto min-h-[38rem]  item-center flex flex-col md:w-5/6 md:flex-row gap-10 justify-center pt-20"
+            className="mx-auto min-h-[38rem]  item-center flex flex-col md:w-5/6 md:flex-row gap-10 justify-center py-20"
           >
             <Skills lang={lang} />
           </section>
           <div className="border-2 w-full m-5"></div>
           <section
             id="projects"
-            className="mx-auto min-h-[38rem] item-center flex flex-col gap-10 md:w-5/6 justify-center pt-20"
+            className="mx-auto min-h-[38rem] item-center flex flex-col gap-10 md:w-5/6 justify-center py-20"
           >
             <Projects lang={lang} scrollToSection={scrollToSection} />
           </section>
           <div className="border-2 w-full m-5"></div>
           <section
             id="contacts"
-            className="mx-auto min-h-[38rem] md:w-5/6 item-center flex flex-col md:flex-row gap-10 justify-center pt-20"
+            className="mx-auto min-h-[38rem] md:w-5/6 item-center flex flex-col md:flex-row gap-10 justify-center py-20"
           >
             <Contacts lang={lang} scrollToSection={scrollToSection} />
           </section>

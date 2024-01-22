@@ -102,15 +102,15 @@ const Navbar = ({
       <DeveloppementBand />
       <nav
         className={`flex justify-between p-4 font-bold bg-gray-800/5 backdrop-blur-md major ${
-          !isVisible && isVerticalNav ? "" : "bg-mintGreen/85 shadow "
+          !isVisible && isVerticalNav ? "" : "bg-mintGreen/85 shadow border-b border-black"
         } w-full text-black `}
       >
         <span
           className={`cursor-pointer ${smoothEffect} pl-1 tracking-tighter text-2xl ${
-            activeSection === "homePage" ? "text-[#ED7D3A]" : ""
+            activeSection === "Hero" ? "text-[#ED7D3A]" : ""
           }
           `}
-          onClick={() => scrollToSection("homePage")}
+          onClick={() => scrollToSection("Hero")}
         >
           {"JSN"}
         </span>
@@ -147,7 +147,7 @@ const Navbar = ({
       </nav>
       <div
         className={`fixed right-0 flex flex-col text-right font-bold uppercase backdrop-blur-md bg-mintGreen/85 shadow text-white h-auto w-auto md:hidden transition-all duration-50 ease-in-out ${
-          activeSection !== "homePage" ? "" : "text-gray-600 "
+          activeSection !== "Hero" ? "" : "text-gray-600 "
         } ${isVisible ? "p-3 py-7" : ""}`}
       >
         {isVisible && <AnchorTagContainer />}

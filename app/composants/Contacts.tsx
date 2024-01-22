@@ -33,12 +33,12 @@ const Contacts: React.FC<ContactsProps> = ({ lang, scrollToSection }) => {
   return (
     <div className="flex flex-col items-center justify-center gap-12">
       <a
-        className={`cursor-pointer tracking-tighter text-5xl font-bold uppercase hover:text-[#ED7D3A] major`}
-        onClick={() => scrollToSection("homePage")}
+        className={`cursor-pointer tracking-tighter text-5xl font-bold uppercase hover:text-[#ED7D3A] major hover:-translate-y-0.5 transition ease-in-out duration-50`}
+        onClick={() => scrollToSection("Hero")}
       >
         {"jsn"}
       </a>
-      <div className="flex items-center justify-center gap-5 mx-12">
+      <div className="flex items-center justify-center gap-5 mx-12 cursor-pointer">
         <ContactIcon
           defaultSrc="/static/images/linkedin.png"
           hoverSrc="/static/images/linkedin-hover.png"
