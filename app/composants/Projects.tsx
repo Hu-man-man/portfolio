@@ -61,7 +61,7 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
 
       !projectsVisible && scrollToSection("projects");
       setProjectsVisible(!projectsVisible);
-    }, 100);
+    }, 200);
   };
 
   const textButton = (

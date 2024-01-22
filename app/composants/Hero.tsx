@@ -18,22 +18,22 @@ const Hero = ({ lang, scrollToSection }: HeroProps) => {
         />
       </div>
       <div className="flex flex-col md:w-2/3 items-center justify-center gap-10">
-        {/* <div> */}
-          <div className="text-center md:text-left">
-            <h1 className="font-bold text-4xl major">HEY !</h1>
-            <br />
+        <div className="text-center md:text-left">
+          <h1 className="font-bold text-4xl major">HEY !</h1>
+          <br />
 
-            <p className="font-bold text-2xl italic">
-              <span className="major text-4xl">"</span>Je suis Jason,
-              développeur Full-Stack et vous êtes les bienvenu·e·s sur mon
-              portfolio.<span className="major text-4xl">"</span>
-            </p>
-          </div>
-        {/* </div> */}
+          <p className="font-bold text-2xl italic">
+            <span className="major text-4xl">"</span>Je suis Jason, développeur
+            Full-Stack et vous êtes les bienvenu·e·s sur mon portfolio.
+            <span className="major text-4xl">"</span>
+          </p>
+        </div>
         <div
           className="flex w-full justify-center md:justify-start"
           onClick={() => {
-            scrollToSection("projects");
+            setTimeout(() => {
+              scrollToSection("projects");
+            }, 200);
           }}
         >
           <PersonnalisedButton buttonText="Mes projets" />
