@@ -25,7 +25,7 @@ const Hero = ({ lang, scrollToSection }: HeroProps) => {
 
             <p className="font-bold text-2xl italic">
               <span className="major text-4xl">"</span>Je suis Jason,
-              développeur Full-Stack et vous êtes les bienvenus sur mon
+              développeur Full-Stack et vous êtes les bienvenu·e·s sur mon
               portfolio.<span className="major text-4xl">"</span>
             </p>
           </div>

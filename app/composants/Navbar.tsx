@@ -148,7 +148,7 @@ const Navbar = ({
       <div
         className={`fixed right-0 flex flex-col text-right font-bold uppercase backdrop-blur-md bg-mintGreen/85 shadow text-white h-auto w-auto md:hidden transition-all duration-50 ease-in-out ${
           activeSection !== "Hero" ? "" : "text-gray-600 "
-        } ${isVisible ? "p-3 py-7" : ""}`}
+        } ${isVisible ? "p-3 py-7 border-b border-l border-black" : ""}`}
       >
         {isVisible && <AnchorTagContainer />}
       </div>

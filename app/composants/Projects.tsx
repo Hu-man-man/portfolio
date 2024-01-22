@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
-import ProjectModal from "./ProjectModal"
-import PersonnalisedButton from "./PersonnalisedButton"
+import ProjectModal from "./ProjectModal";
+import PersonnalisedButton from "./PersonnalisedButton";
 
 type ProjectsProps = {
   lang: "fr" | "an";
@@ -57,22 +57,28 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
   };
 
   const handleProjectsVisible = () => {
-    !projectsVisible && scrollToSection("projects");
-    setProjectsVisible(!projectsVisible);
+    setTimeout(() => {
+
+      !projectsVisible && scrollToSection("projects");
+      setProjectsVisible(!projectsVisible);
+    }, 100);
   };
 
-  const textButton = (<>
-   <i
-            className={`fi fi-rr-chevron-double-${
-              projectsVisible ? "down" : "up"
-            } items-center mr-2`}
-          ></i>
-          {projectsVisible ? "Plus" : "Moins"} de projets
-          <i
-            className={`fi fi-rr-chevron-double-${
-              projectsVisible ? "down" : "up"
-            } ml-2`}
-          ></i></>)
+  const textButton = (
+    <>
+      <i
+        className={`fi fi-rr-chevron-double-${
+          projectsVisible ? "down" : "up"
+        } items-center mr-2`}
+      ></i>
+      {projectsVisible ? "Plus" : "Moins"} de projets
+      <i
+        className={`fi fi-rr-chevron-double-${
+          projectsVisible ? "down" : "up"
+        } ml-2`}
+      ></i>
+    </>
+  );
 
   return (
     <>
@@ -98,16 +104,14 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
               />
               <div className="bg-[#ED7D3A]/70 backdrop-blur-sm inset-0 absolute flex flex-col justify-center items-center gap-6 text-white opacity-0 hover:opacity-100 transition ease-in-out duration-700">
                 <h2 className="text-xl font-bold">{project.name}</h2>
-                <ProjectModal project={project}  />
-              </div>              
+                <ProjectModal project={project} />
+              </div>
             </div>
           ))}
       </div>
       <div className="w-full flex justify-center major items-center">
-        <div
-          onClick={() => handleProjectsVisible()}
-        >
-         <PersonnalisedButton buttonText={textButton} />
+        <div onClick={() => handleProjectsVisible()}>
+          <PersonnalisedButton buttonText={textButton} />
         </div>
       </div>
     </>
