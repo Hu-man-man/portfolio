@@ -42,11 +42,11 @@ const Skills = ({ lang }: SkillsProps) => {
           {lang === "fr" ? (
             <><span className="major text-4xl">"</span>
               {
-                " Passionné par la résolution de problèmes et la création, je me suis spécialisé en React et suis constamment ouvert à l'apprentissage de nouvelles technologies. En 2023 j'ai obtenu un diplôme en développement d'applications web et mobile."
+                " Passionné par la résolution de problèmes et la création, je me suis spécialisé en React et suis constamment ouvert à l'apprentissage de nouvelles technologies. "
               }
               <br />
               {
-                "Mon expérience en tant qu'opticien m'a inculqué des compétences de communication et de réflexion. Je suis enthousiaste à l'idée d'apporter ma passion et mes compétences au sein de vos équipes. "
+                "En 2023 j'ai obtenu un diplôme en développement d'applications web et mobile et mon expérience en tant qu'opticien m'a inculqué des compétences de communication et de réflexion. Je suis enthousiaste à l'idée d'apporter ma passion et mes compétences au sein d'une équipe experte. "
               }<span className="major text-4xl">"</span>
             </>
           ) : (

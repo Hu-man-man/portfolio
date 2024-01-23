@@ -17,7 +17,7 @@ const Hero = ({ lang, scrollToSection }: HeroProps) => {
           height={100}
         />
       </div>
-      <div className="flex flex-col md:w-2/3 items-center justify-center gap-10">
+      <div className="flex flex-col md:w-2/3 items-center justify-center gap-20">
         <div className="text-center md:text-left">
           <h1 className="font-bold text-4xl major">HEY !</h1>
           <br />

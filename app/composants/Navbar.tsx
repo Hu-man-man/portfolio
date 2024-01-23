@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import DeveloppementBand from './DeveloppementBand';
+import DeveloppementBand from "./DeveloppementBand";
 
 type NavbarProps = {
   lang: "fr" | "an";
@@ -45,8 +45,6 @@ const Navbar = ({
     sendDataToParent(isVisible);
   }, [isVisible, sendDataToParent]);
 
-  
-
   const smoothEffect =
     "hover:-translate-y-0.5 transition ease-in-out duration-50";
 
@@ -59,9 +57,7 @@ const Navbar = ({
       <span
         onClick={() => scrollToSection(sectionId)}
         className={`cursor-pointer mr-3 ${
-          activeSection === sectionId
-            ? "text-[#ED7D3A]"
-            : "text-gray-600"
+          activeSection === sectionId ? "text-[#ED7D3A]" : "text-gray-600"
         }`}
       >
         {lang === "fr" ? textFr : textEn}
@@ -71,9 +67,7 @@ const Navbar = ({
 
   const AnchorTagContainer = () => (
     <>
-      <div
-        className={`flex flex-col gap-5 md:flex-row md:items-center `}
-      >
+      <div className={`flex flex-col gap-5 md:flex-row md:items-center `}>
         <div className={smoothEffect}>
           {renderSectionLink("skills", "Compétences", "Skills")}
         </div>
@@ -102,7 +96,9 @@ const Navbar = ({
       <DeveloppementBand />
       <nav
         className={`flex justify-between p-4 font-bold bg-gray-800/5 backdrop-blur-md major ${
-          !isVisible && isVerticalNav ? "" : "bg-mintGreen/85 shadow border-b border-black"
+          !isVisible && isVerticalNav
+            ? ""
+            : "bg-mintGreen/85 shadow border-b border-black"
         } w-full text-black `}
       >
         <span
@@ -117,11 +113,13 @@ const Navbar = ({
         <div className={`hidden md:flex `}>
           <AnchorTagContainer />
         </div>
-        <div className={smoothEffect}>
+        {/* <div className={smoothEffect}>
           <span
             onClick={() => changeLanguage("fr")}
             className={
-              lang === "an" ? "cursor-pointer font-light" : "cursor-default uppercase"
+              lang === "an"
+                ? "cursor-pointer font-light"
+                : "cursor-default uppercase"
             }
           >
             fr
@@ -130,12 +128,14 @@ const Navbar = ({
           <span
             onClick={() => changeLanguage("an")}
             className={
-              lang === "fr" ? "cursor-pointer font-light" : "cursor-default uppercase"
+              lang === "fr"
+                ? "cursor-pointer font-light"
+                : "cursor-default uppercase"
             }
           >
             en
           </span>
-        </div>
+        </div> */}
         <span className="md:hidden origin-center rotate-90 text-2xl">
           <i
             className={
@@ -145,13 +145,15 @@ const Navbar = ({
           ></i>
         </span>
       </nav>
-      <div
-        className={`fixed right-0 flex flex-col text-right font-bold uppercase backdrop-blur-md bg-mintGreen/85 shadow text-white h-auto w-auto md:hidden transition-all duration-50 ease-in-out ${
-          activeSection !== "Hero" ? "" : "text-gray-600 "
-        } ${isVisible ? "p-3 py-7 border-b border-l border-black" : ""}`}
-      >
-        {isVisible && <AnchorTagContainer />}
-      </div>
+      {isVisible && (
+        <div
+          className={`fixed right-0 flex flex-col text-right font-bold uppercase backdrop-blur-md bg-mintGreen/85 shadow text-white h-auto w-auto md:hidden transition-all duration-50 ease-in-out ${
+            activeSection !== "Hero" ? "" : "text-gray-600 "
+          } ${isVisible ? "p-3 py-7 border-b border-l border-black" : ""}`}
+        >
+          <AnchorTagContainer />
+        </div>
+      )}
     </div>
   );
 };

@@ -14,12 +14,14 @@ const ContactIcon: React.FC<ContactIconProps> = ({ defaultSrc, hoverSrc }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <Image
-        src={isHovered ? hoverSrc : defaultSrc}
-        alt="Contact Icon"
-        width={100}
-        height={100}
-      />
+      <a href="../../public/static/CV2024Alt.pdf" download="Jason-Ricou-cv.pdf" >
+        <Image
+          src={isHovered ? hoverSrc : defaultSrc}
+          alt="Contact Icon"
+          width={100}
+          height={100}
+        />
+      </a>
     </div>
   );
 };
@@ -39,7 +41,7 @@ const Contacts: React.FC<ContactsProps> = ({ lang, scrollToSection }) => {
         {"jsn"}
       </a>
       <div className="flex items-center justify-center gap-5 mx-12 cursor-pointer">
-        <ContactIcon
+        {/* <ContactIcon
           defaultSrc="/static/images/linkedin.png"
           hoverSrc="/static/images/linkedin-hover.png"
         />
@@ -50,11 +52,15 @@ const Contacts: React.FC<ContactsProps> = ({ lang, scrollToSection }) => {
         <ContactIcon
           defaultSrc="/static/images/email.png"
           hoverSrc="/static/images/email-hover.png"
-        />
+        />*/}
+        <a className="relative fa-brands fa-linkedin text-8xl text-black hover:text-[#ED7D3A] " href='https://www.linkedin.com/in/jason-ricou/' target="_blank" ></a>
+        <a className="fa-brands fa-github text-8xl text-black hover:text-[#ED7D3A]" href='https://github.com/Hu-man-man' target="_blank" ></a>
+        <a className="fa-solid fa-envelope text-8xl text-black hover:text-[#ED7D3A]" href="mailto:jason.ricou@gmail.com"></a>
         <ContactIcon
           defaultSrc="/static/images/cv.png"
           hoverSrc="/static/images/cv-hover.png"
-        />
+        /> 
+        
       </div>
     </div>
   );
