@@ -102,8 +102,8 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
                 layout="responsive"
                 className="object-contain"
               />
-              <div className="bg-[#ED7D3A]/70 backdrop-blur-sm inset-0 absolute flex flex-col justify-center items-center gap-6 text-white opacity-0 hover:opacity-100 transition ease-in-out duration-700">
-                <h2 className="text-xl font-bold">{project.name}</h2>
+              <div className="bg-[#ED7D3A]/70 backdrop-blur-sm rounded-xl inset-0 absolute flex flex-col justify-center items-center gap-6 text-white opacity-0 hover:opacity-100 transition ease-in-out duration-700">
+                <h2 className="text-2xl font-bold">{project.name}</h2>
                 <ProjectModal project={project} />
               </div>
             </div>

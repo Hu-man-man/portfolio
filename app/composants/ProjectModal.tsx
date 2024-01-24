@@ -37,7 +37,7 @@ const ProjectModal = ({ project }: ProjectModalProps) => {
         onRequestClose={handleCloseModal}
         shouldCloseOnOverlayClick={true}
         ariaHideApp={true} // Remove if you don't need to hide the app from screen readers
-        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/3 min-h-96 bg-white rounded-lg outline-0"
+        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4/5 md:w-2/3 min-h-96 bg-white rounded-lg outline-0 border border-black"
       >
         <div className="flex justify-between text-xl p-5">
           <h2>{project.name}</h2>
@@ -57,7 +57,7 @@ const ProjectModal = ({ project }: ProjectModalProps) => {
                 className="object-contain"
               />
             </div>
-            <div className='flex flex-col md:w-2/3 md:pr-10 gap-10'>
+            <div className='flex flex-col md:w-2/3 px-3 md:pr-10 gap-10'>
             <p>{project.description}</p>
             <a
               href={project.url}
