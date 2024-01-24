@@ -16,7 +16,6 @@ const Skills = ({ lang }: SkillsProps) => {
   const softSkillsList = [
     "Curiosité",
     "Ecoute active",
-    "Précision",
     "Perfectionnisme",
     "Travail en équipe",
     "Autonomie",
@@ -27,7 +26,7 @@ const Skills = ({ lang }: SkillsProps) => {
 
   const mapping = (list: string[]) => {
     return list.map((item, index) => (
-      <div key={index} className="p-3 rounded-lg bg-white text-black font-bold border border-black">
+      <div key={index} className="p-3 rounded-lg bg-white text-black font-bold border border-black text-base">
         {item}
       </div>
     ));
@@ -56,12 +55,12 @@ const Skills = ({ lang }: SkillsProps) => {
       </div>
       <div className="flex items-center justify-center md:w-1/2">
         <div>
-          <h2 className="ml-8 mb-3 text-lg font-bold major">My Skills</h2>
+          <h2 className="ml-8 mb-5 text-xl font-bold major">Mes Skills</h2>
           <div className="flex flex-wrap px-9 gap-3 md:content-center">
             {mapping(skillsList)}
           </div>
           <br />
-          <h2 className="ml-8 mb-3 text-lg font-bold major">My Soft Skills</h2>
+          <h2 className="ml-8 mb-5 text-xl font-bold major">Mes Soft Skills</h2>
           <div className="flex flex-wrap px-9 gap-3 md:content-center">
             {mapping(softSkillsList)}
           </div>

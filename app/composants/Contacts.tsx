@@ -1,30 +1,58 @@
-import React, { useState } from "react";
-import Image from "next/image";
+// import PersonnalisedButton from "./PersonnalisedButton";
 
-type ContactIconProps = {
-  defaultSrc: string;
-  hoverSrc: string;
-};
+// type ContactsProps = {
+//   lang: "fr" | "an";
+//   scrollToSection: (id: string) => void;
+// };
 
-const ContactIcon: React.FC<ContactIconProps> = ({ defaultSrc, hoverSrc }) => {
-  const [isHovered, setIsHovered] = useState(false);
+// const Contacts: React.FC<ContactsProps> = ({ lang, scrollToSection }) => {
+//   return (
+//     <div className="flex flex-col items-center justify-center gap-16">
+//       <a
+//         className={`cursor-pointer tracking-tighter text-5xl font-bold uppercase hover:text-[#ED7D3A] major hover:-translate-y-0.5 transition ease-in-out duration-50`}
+//         onClick={() => scrollToSection("Hero")}
+//       >
+//         {"jsn"}
+//       </a>
+//       <div className="flex  flex-wrap items-center justify-center gap-7 px-12 cursor-pointer text-5xl md:text-7xl">
+//         <a
+//           href="https://www.linkedin.com/in/jason-ricou/"
+//           target="_blank"
+//         >
+//           <PersonnalisedButton
+//           buttonText={<i className="fi fi-brands-linkedin text-gray-600"></i>}
+//         />
+//         </a>
+//         <a
+//           href="https://github.com/Hu-man-man"
+//           target="_blank"
+//         >
+//           <PersonnalisedButton
+//           buttonText={<i className="fi fi-brands-github text-gray-600"></i>}
+//         />
+//         </a>
+//         <a
+//           href="mailto:jason.ricou@gmail.com"
+//         >
+//           <PersonnalisedButton
+//           buttonText={<i className="fi fi-sr-envelope text-gray-600"></i>}
+//         />
+//         </a>
+//         <a
+//           href="CV2024Alt.pdf"
+//           download="Jason-Ricou-cv.pdf"
+//         >
+//           <PersonnalisedButton
+//           buttonText={<i className="fi fi-sr-file-user text-gray-600"></i>}
+//         />
+//         </a>
+//       </div>
+//     </div>
+//   );
+// };
 
-  return (
-    <div
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <a href="../../public/static/CV2024Alt.pdf" download="Jason-Ricou-cv.pdf" >
-        <Image
-          src={isHovered ? hoverSrc : defaultSrc}
-          alt="Contact Icon"
-          width={100}
-          height={100}
-        />
-      </a>
-    </div>
-  );
-};
+import React, { useState } from 'react';
+import PersonnalisedButton from './PersonnalisedButton';
 
 type ContactsProps = {
   lang: "fr" | "an";
@@ -32,39 +60,43 @@ type ContactsProps = {
 };
 
 const Contacts: React.FC<ContactsProps> = ({ lang, scrollToSection }) => {
+  const [isButtonClicked, setButtonClicked] = useState(false);
+
+  const handleButtonClick = (action: () => void) => {
+    if (!isButtonClicked) {
+      setButtonClicked(true);
+
+      setTimeout(() => {
+        action();
+        setButtonClicked(false);
+      }, 200);
+    }
+  };
+
   return (
-    <div className="flex flex-col items-center justify-center gap-12">
-      <a
+    <div className="flex flex-col items-center justify-center gap-16">
+      <div
         className={`cursor-pointer tracking-tighter text-5xl font-bold uppercase hover:text-[#ED7D3A] major hover:-translate-y-0.5 transition ease-in-out duration-50`}
         onClick={() => scrollToSection("Hero")}
       >
         {"jsn"}
-      </a>
-      <div className="flex items-center justify-center gap-5 mx-12 cursor-pointer">
-        {/* <ContactIcon
-          defaultSrc="/static/images/linkedin.png"
-          hoverSrc="/static/images/linkedin-hover.png"
-        />
-        <ContactIcon
-          defaultSrc="/static/images/github.png"
-          hoverSrc="/static/images/github-hover.png"
-        />
-        <ContactIcon
-          defaultSrc="/static/images/email.png"
-          hoverSrc="/static/images/email-hover.png"
-        />*/}
-        <a className="relative fa-brands fa-linkedin text-8xl text-black hover:text-[#ED7D3A] " href='https://www.linkedin.com/in/jason-ricou/' target="_blank" ></a>
-        <a className="fa-brands fa-github text-8xl text-black hover:text-[#ED7D3A]" href='https://github.com/Hu-man-man' target="_blank" ></a>
-        <a className="fa-solid fa-envelope text-8xl text-black hover:text-[#ED7D3A]" href="mailto:jason.ricou@gmail.com"></a>
-        <ContactIcon
-          defaultSrc="/static/images/cv.png"
-          hoverSrc="/static/images/cv-hover.png"
-        /> 
-        
+      </div>
+      <div className="flex flex-wrap items-center justify-center gap-3 md:gap-7 px-12 *:cursor-pointer text-5xl md:text-7xl *:my-4">
+        <div onClick={() => handleButtonClick(() => window.open("https://www.linkedin.com/in/jason-ricou/", "_blank"))}>
+          <PersonnalisedButton buttonText={<i className="fi fi-brands-linkedin text-gray-600"></i>} />
+        </div>
+        <div onClick={() => handleButtonClick(() => window.open("https://github.com/Hu-man-man", "_blank"))}>
+          <PersonnalisedButton buttonText={<i className="fi fi-brands-github text-gray-600"></i>} />
+        </div>
+        <div onClick={() => handleButtonClick(() => window.location.href = "mailto:jason.ricou@gmail.com")}>
+          <PersonnalisedButton buttonText={<i className="fi fi-sr-envelope text-gray-600"></i>} />
+        </div>
+        <div onClick={() => handleButtonClick(() => window.open("/static/CV2024Alt.pdf", "_blank"))}>
+          <PersonnalisedButton buttonText={<i className="fi fi-sr-file-user text-gray-600"></i>} />
+        </div>
       </div>
     </div>
   );
 };
 
 export default Contacts;
-

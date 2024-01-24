@@ -82,7 +82,7 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
 
   return (
     <>
-      <div className="title text-center text-2xl font-bold major">
+      <div className="title text-center text-xl font-bold major">
         Quelques projets récents:
       </div>
       <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-5 ">

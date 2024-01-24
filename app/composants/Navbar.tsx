@@ -55,7 +55,9 @@ const Navbar = ({
   ) => {
     return (
       <span
-        onClick={() => scrollToSection(sectionId)}
+        onClick={() => {
+          scrollToSection(sectionId)
+          isVisible && setIsVisible(false)}}
         className={`cursor-pointer mr-3 ${
           activeSection === sectionId ? "text-[#ED7D3A]" : "text-gray-600"
         }`}

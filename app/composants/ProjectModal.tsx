@@ -27,7 +27,7 @@ const ProjectModal = ({ project }: ProjectModalProps) => {
   return (
     <div className="relative">
       <i
-        className="text-5xl fi fi-sr-add opacity-50 hover:opacity-100 hover:animate-pulse "
+        className="text-5xl fi fi-sr-add opacity-50 hover:opacity-100"
         onClick={handleOpenModal}
       ></i>
 
