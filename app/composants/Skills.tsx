@@ -45,7 +45,7 @@ const Skills = ({ lang }: SkillsProps) => {
               }
               <br />
               {
-                "En 2023 j'ai obtenu un diplôme en développement d'applications web et mobile et mon expérience en tant qu'opticien m'a inculqué des compétences de communication et de réflexion. Je suis enthousiaste à l'idée d'apporter ma passion et mes compétences au sein d'une équipe experte. "
+                "En 2023 j'ai obtenu un diplôme en développement d'applications web et mobile et mon expérience en tant qu'opticien m'a inculqué des compétences de communication et de réflexion. Je suis enthousiaste à l'idée d'apporter ma passion au sein d'une équipe experte. "
               }<span className="major text-4xl">"</span>
             </>
           ) : (
