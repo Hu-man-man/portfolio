@@ -23,6 +23,7 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
       alt: "screenshot de l'application clone trello",
       description:
         "Application en React clone de Trello. Exercice d'entrainement avec la technologie TypeScript, et le glissé déposé",
+      technologies: "HTML / CSS / JavaScript / TypeScript",
     },
     {
       id: "fdm",
@@ -31,7 +32,8 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
       imageSrc: "/static/images/screen-LFDM.png",
       alt: "screenshot de l'application la ferme de Meyreinal",
       description:
-        "Application en React Native créée en collaboration avec Assen Iliev qui utilise diverses technologies. Elle est destinée à un permaculteur Ardéchois",
+        "Application créée en collaboration avec Assen Iliev destinée à un permaculteur Ardéchois",
+      technologies: "HTML / CSS / JavaScript / React Native / Redux / Express / Expo / MongoDB / Bcrypt / Cloudinary",
     },
     {
       id: "myMoviz",
@@ -41,6 +43,7 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
       alt: "screenshot de l'application My Moviz",
       description:
         "Application en React pour le front-end et express pour le back-end. Exercice d'entrainement pour coder avec next.js, faire une interface adaptative et travailler avec une api",
+      technologies: "HTML / CSS / JavaScript / Next / React / Express",
     },
     {
       id: "portfolio",
@@ -48,7 +51,8 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
       url: "https://portfolio-mu-ten-80.vercel.app/",
       imageSrc: "/static/images/screen-portfolio.png",
       alt: "screenshot de l'application porfolio",
-      description: "Application utilisant Next js. Interface adaptative.",
+      description: "Application sur laquelle vous êjes actuellement.",
+      technologies: "HTML / Tailwind / JavaScript / TypeScript / React / Next",
     },
   ];
 

@@ -10,6 +10,7 @@ type ProjectModalProps = {
     imageSrc: string;
     alt: string;
     description: string;
+    technologies: string;
   };
 };
 
@@ -27,7 +28,7 @@ const ProjectModal = ({ project }: ProjectModalProps) => {
   return (
     <div className="relative">
       <i
-        className="text-5xl fi fi-sr-add opacity-50 hover:opacity-100"
+        className="text-5xl fi fi-sr-add opacity-50 hover:opacity-100 cursor-pointer"
         onClick={handleOpenModal}
       ></i>
 
@@ -41,7 +42,7 @@ const ProjectModal = ({ project }: ProjectModalProps) => {
       >
         <div className="flex justify-between text-xl p-5">
           <h2>{project.name}</h2>
-          <i className="fi fi-rr-cross" onClick={handleCloseModal}></i>
+          <i className="fi fi-rr-cross cursor-pointer" onClick={handleCloseModal}></i>
         </div>
         <div>
           <div className="flex flex-col md:flex-row justify-center items-center gap-10">
@@ -59,6 +60,10 @@ const ProjectModal = ({ project }: ProjectModalProps) => {
             </div>
             <div className='flex flex-col md:w-2/3 px-3 md:pr-10 gap-10'>
             <p>{project.description}</p>
+            <div>
+            <h2>Technologies utilisées :</h2>
+            <p>{project.technologies}</p>
+            </div>
             <a
               href={project.url}
               target="_blank"
@@ -66,6 +71,7 @@ const ProjectModal = ({ project }: ProjectModalProps) => {
               onClick={handleCloseModal}
             >
               LINK
+              <i className="fi fi-rr-link-alt"></i>
             </a>
             </div>
           </div>

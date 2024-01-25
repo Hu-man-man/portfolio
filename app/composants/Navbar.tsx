@@ -59,7 +59,7 @@ const Navbar = ({
           scrollToSection(sectionId)
           isVisible && setIsVisible(false)}}
         className={`cursor-pointer mr-3 ${
-          activeSection === sectionId ? "text-[#ED7D3A]" : "text-gray-600"
+          activeSection === sectionId ? "text-[#ED7D3A]" : "text-black"
         }`}
       >
         {lang === "fr" ? textFr : textEn}
@@ -115,6 +115,7 @@ const Navbar = ({
         <div className={`hidden md:flex `}>
           <AnchorTagContainer />
         </div>
+        <div className='tracking-tighter text-2xl cursor-default opacity-0'>JSN</div> {/*Je triche là mais quand le choix de la langue sera mit en place tout sera rétabli */}
         {/* <div className={smoothEffect}>
           <span
             onClick={() => changeLanguage("fr")}
