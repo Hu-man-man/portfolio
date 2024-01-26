@@ -51,7 +51,7 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
       url: "https://portfolio-mu-ten-80.vercel.app/",
       imageSrc: "/static/images/screen-portfolio.png",
       alt: "screenshot de l'application porfolio",
-      description: "Application sur laquelle vous êjes actuellement.",
+      description: "Application sur laquelle vous êtes actuellement.",
       technologies: "HTML / Tailwind / JavaScript / TypeScript / React / Next",
     },
   ];

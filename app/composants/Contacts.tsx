@@ -81,18 +81,18 @@ const Contacts: React.FC<ContactsProps> = ({ lang, scrollToSection }) => {
       >
         {"jsn"}
       </div>
-      <div className="flex flex-wrap items-center justify-center gap-3 md:gap-7 px-12 *:cursor-pointer text-5xl md:text-7xl *:my-4">
+      <div className="flex flex-wrap items-center justify-center gap-5 md:gap-7 px-12 *:cursor-pointer text-5xl md:text-7xl *:my-6">
         <div onClick={() => handleButtonClick(() => window.open("https://www.linkedin.com/in/jason-ricou/", "_blank"))}>
-          <PersonnalisedButton buttonText={<i className="fi fi-brands-linkedin text-gray-600"></i>} />
+          <PersonnalisedButton buttonText={<i className="fi fi-brands-linkedin text-gray-600"></i>} label="Linkedin" />
         </div>
         <div onClick={() => handleButtonClick(() => window.open("https://github.com/Hu-man-man", "_blank"))}>
-          <PersonnalisedButton buttonText={<i className="fi fi-brands-github text-gray-600"></i>} />
+          <PersonnalisedButton buttonText={<i className="fi fi-brands-github text-gray-600"></i>} label="Github" />
         </div>
         <div onClick={() => handleButtonClick(() => window.location.href = "mailto:jason.ricou@gmail.com")}>
-          <PersonnalisedButton buttonText={<i className="fi fi-sr-envelope text-gray-600"></i>} />
+          <PersonnalisedButton buttonText={<i className="fi fi-sr-envelope text-gray-600"></i>} label="Mail" />
         </div>
         <div onClick={() => handleButtonClick(() => window.open("/static/CV2024Alt.pdf", "_blank"))}>
-          <PersonnalisedButton buttonText={<i className="fi fi-sr-file-user text-gray-600"></i>} />
+          <PersonnalisedButton buttonText={<i className="fi fi-sr-file-user text-gray-600"></i>} label="Cv" />
         </div>
       </div>
     </div>

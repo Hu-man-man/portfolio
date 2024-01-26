@@ -5,11 +5,12 @@ type SkillsProps = {
 const Skills = ({ lang }: SkillsProps) => {
   const skillsList = [
     "HTML/CSS3",
+    "JavaScript/TypeScript",
     "React",
     "ReactNative",
-    "JavaScript/TypeScript",
     "Next.js",
     "TailwindCSS",
+    "Express",
     "Firebase",
     "Mongo",
   ];
@@ -39,14 +40,14 @@ const Skills = ({ lang }: SkillsProps) => {
         <br/>
         <p className="text-center text-xl md:text-left italic leading-relaxed">
           {lang === "fr" ? (
-            <><span className="major text-4xl">"</span>
+            <><span className="major pr-2">"</span>
               {
                 " Passionné par la résolution de problèmes et la création, je me suis spécialisé en React et suis constamment ouvert à l'apprentissage de nouvelles technologies. "
               }
               <br />
               {
                 "En 2023 j'ai obtenu un diplôme en développement d'applications web et mobile et mon expérience en tant qu'opticien m'a inculqué des compétences de communication et de réflexion. Je suis enthousiaste à l'idée d'apporter ma passion au sein d'une équipe experte. "
-              }<span className="major text-4xl">"</span>
+              }<span className="major pl-2">"</span>
             </>
           ) : (
             "Apollinares locum nulla Crateras multorum nulla nulla in lapide ambo non Antiochia constaret Crateras in Apollinares per lapide post Antiochia lapide pater per et exilium Crateras pervenissent quae occiduntur in dilatata levius multorum igitur et quae mandatum nulla Apollinares levius nomine filius ad clades et constaret exilium post ambo mandatum fortunas quarto Antiochia."

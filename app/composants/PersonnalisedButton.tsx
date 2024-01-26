@@ -2,9 +2,10 @@ import { useState, } from 'react';
 
 type PersonnalisedButtonProps = {
     buttonText: any;
+    label?: string;
 }
 
-const PersonnalisedButton = ({buttonText}: PersonnalisedButtonProps) => {
+const PersonnalisedButton = ({buttonText, label}: PersonnalisedButtonProps) => {
 
     const [buttonClicked, setButtonClicked] = useState<boolean>(false);
 
@@ -17,7 +18,7 @@ const PersonnalisedButton = ({buttonText}: PersonnalisedButtonProps) => {
     }
 
   return (
-    <div>
+    <div className='relative'>
       <a
         // className="relative bg-gradient-to-r from-black/60 to-98% to-black/40 p-4  rounded-3xl cursor-pointer my-10   major"
         className="relative bg-black/50 p-4  rounded-3xl cursor-pointer my-10   major"
@@ -30,6 +31,7 @@ const PersonnalisedButton = ({buttonText}: PersonnalisedButtonProps) => {
         </span>
         {buttonText}
       </a>
+      {label && <div className="absolute flex  flex-center justify-center items-center w-full -top-12 text-xs font-bold major text-center bg-white border border-black border-dashed ">{label}</div>}
     </div>
   );
 };

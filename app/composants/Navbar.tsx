@@ -142,7 +142,7 @@ const Navbar = ({
         <span className="md:hidden origin-center rotate-90 text-2xl">
           <i
             className={
-              isVisible ? "fi fi-rr-cross text-[#ED7D3A]" : "fi fi-rr-tally-4"
+              isVisible ? "fi fi-br-cross text-[#ED7D3A]" : "fi fi-br-tally-4"
             }
             onClick={handleIsVisible}
           ></i>

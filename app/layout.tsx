@@ -49,6 +49,10 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://cdn-uicons.flaticon.com/2.1.0/uicons-brands/css/uicons-brands.css"
         ></link>
+        <link
+          rel="stylesheet"
+          href="https://cdn-uicons.flaticon.com/2.1.0/uicons-bold-rounded/css/uicons-bold-rounded.css"
+        ></link>
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
