@@ -31,7 +31,7 @@ const PersonnalisedButton = ({buttonText, label}: PersonnalisedButtonProps) => {
         </span>
         {buttonText}
       </a>
-      {label && <div className="absolute flex  flex-center justify-center items-center w-full -top-12 text-xs font-bold major text-center bg-white border border-black border-dashed ">{label}</div>}
+      {label && <div className="absolute flex  flex-center justify-center items-center w-full -top-10 text-xs font-bold major text-center">{label}</div>}
     </div>
   );
 };
