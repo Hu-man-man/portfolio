@@ -54,6 +54,15 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
       description: "Application sur laquelle vous êtes actuellement.",
       technologies: "HTML / Tailwind / JavaScript / TypeScript / React / Next",
     },
+    {
+      id: "x",
+      name: '"Clone" de X',
+      url: "https://x-like.vercel.app/",
+      imageSrc: "/static/images/x.png",
+      alt: "screenshot de l'application x",
+      description: "Application d'entrainement sur firebase Authentication",
+      technologies: "HTML / Tailwind / JavaScript / React / Next / Firebase Auth",
+    },
   ];
 
   const handleDescription = (event: DescType) => {

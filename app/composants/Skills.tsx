@@ -17,7 +17,8 @@ const Skills = ({ lang }: SkillsProps) => {
   const softSkillsList = [
     "Curiosité",
     "Ecoute active",
-    "Perfectionnisme",
+    "Appliqué",
+    "Créatif",
     "Travail en équipe",
     "Autonomie",
     "Adaptabilité",
