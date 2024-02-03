@@ -12,7 +12,7 @@ const Hero = ({ lang, scrollToSection }: HeroProps) => {
       <div className="flex md:w-1/3 items-center justify-center">
         <div className="flex border border-black bg-white h-40 w-40 md:h-60 md:w-60 overflow-hidden rounded-full">
           <Image
-            src="/static/images/jason.jpg"
+            src="/static/images/jason.png"
             alt="realy bad picture of Jason"
             width={400}
             height={400}

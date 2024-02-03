@@ -60,7 +60,7 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
       url: "https://x-like.vercel.app/",
       imageSrc: "/static/images/x.png",
       alt: "screenshot de l'application x",
-      description: "Application d'entrainement sur firebase Authentication",
+      description: "Application d'entrainement sur firebase Authentication. Pas encore adaptée aux petits écrants.",
       technologies: "HTML / Tailwind / JavaScript / React / Next / Firebase Auth",
     },
   ];
