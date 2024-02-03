@@ -1,12 +1,11 @@
 const DeveloppementBand = () => {
   return (
     <>
-      <div className="absolute text-xl font-bold z-50 bg-[#ED7D3A]/30 text-white/70 -rotate-[40deg] -left-96 top-32 w-30 py-1">
-        <span className="animate-marquee">#OPENTOWORK</span>
-        <span className="animate-marquee">#OPENTOWORK</span>
-        <span className="animate-marquee">#OPENTOWORK</span>
-        <span className="animate-marquee">#OPENTOWORK</span>
-        <span className="animate-marquee">#OPENTOWORK</span>
+      <div className="flex absolute text-lg md:text-xl mt-6 md:mt-0 font-bold z-50 bg-[#ED7D3A]/30 text-white md:text-white/75 -rotate-[40deg] -left-48 md:-left-72 md:top-20 w-30 py-1">
+        <span className="animate-marquee pr-1">#OPENTOWORK</span>
+        <span className="animate-marquee pr-1">#OPENTOWORK</span>
+        <span className="animate-marquee pr-1">#OPENTOWORK</span>
+        <span className="animate-marquee pr-1">#OPENTOWORK</span>
       </div>
 
       <style jsx>{`
@@ -22,7 +21,7 @@ const DeveloppementBand = () => {
         .animate-marquee {
           display: inline-block;
           white-space: nowrap;
-          animation: marquee 25s linear infinite;
+          animation: marquee 30s linear infinite;
         }
         `}</style>
     </>
