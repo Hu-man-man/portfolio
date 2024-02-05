@@ -40,7 +40,7 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
       id: "myMoviz",
       name: "My Moviz",
       url: "https://mymoviz-front-zeta.vercel.app/",
-      imageSrc: "/static/images/screen-myMoviz.png",
+      imageSrc: "/static/images/screen-mymoviz.png",
       alt: "screenshot de l'application My Moviz",
       description:
         "Application en React pour le front-end et express pour le back-end. Exercice d'entrainement pour coder avec next.js, faire une interface adaptative et travailler avec une api",
@@ -115,7 +115,6 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
                 height={300}
                 layout="responsive"
                 className="object-contain"
-                loading = 'lazy'
               />
               <div className="bg-[#ED7D3A]/70 backdrop-blur-sm rounded-xl inset-0 absolute flex flex-col justify-center items-center gap-6 text-white opacity-0 hover:opacity-100 transition ease-in-out duration-700">
                 <h2 className="text-2xl font-bold">{project.name}</h2>
