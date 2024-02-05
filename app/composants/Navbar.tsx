@@ -5,7 +5,7 @@ type NavbarProps = {
   lang: "fr" | "an";
   scrollToSection: (id: string) => void;
   handleSwitchLanguage: (selectedLang: "fr" | "an") => void;
-  sendDataToParent: (isVisible: boolean) => void;
+  sendDataToParent: (isMobileNavVisible: boolean) => void;
 };
 
 const Navbar = ({
@@ -14,13 +14,13 @@ const Navbar = ({
   handleSwitchLanguage,
   sendDataToParent,
 }: NavbarProps) => {
-  const [isVerticalNav, setIsVerticalNav] = useState(true);
+  const [isScroll, setIsScroll] = useState(true);
   const [activeSection, setActiveSection] = useState("");
-  const [isVisible, setIsVisible] = useState(false);
+  const [isMobileNavVisible, setIsMobileNavVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsVerticalNav(window.scrollY <= 10);
+      setIsScroll(window.scrollY <= 10);
 
       // Récupérer toutes les sections
       const sections = document.querySelectorAll("section");
@@ -42,8 +42,8 @@ const Navbar = ({
   }, []);
 
   useEffect(() => {
-    sendDataToParent(isVisible);
-  }, [isVisible, sendDataToParent]);
+    sendDataToParent(isMobileNavVisible);
+  }, [isMobileNavVisible, sendDataToParent]);
 
   const smoothEffect =
     "hover:-translate-y-0.5 transition ease-in-out duration-50";
@@ -57,7 +57,7 @@ const Navbar = ({
       <span
         onClick={() => {
           scrollToSection(sectionId)
-          isVisible && setIsVisible(false)}}
+          isMobileNavVisible && setIsMobileNavVisible(false)}}
         className={`cursor-pointer mr-3 ${
           activeSection === sectionId ? "text-[#ED7D3A]" : "text-black"
         }`}
@@ -89,8 +89,8 @@ const Navbar = ({
     }
   };
 
-  const handleIsVisible = (): void => {
-    setIsVisible(!isVisible);
+  const handleIsMobileNavVisible = (): void => {
+    setIsMobileNavVisible(!isMobileNavVisible);
   };
 
   return (
@@ -98,7 +98,7 @@ const Navbar = ({
       <DeveloppementBand />
       <nav
         className={`flex justify-between p-4 font-bold bg-gray-800/5 backdrop-blur-md major ${
-          !isVisible && isVerticalNav
+          !isMobileNavVisible && isScroll
             ? ""
             : "bg-mintGreen/85 shadow border-b border-black"
         } w-full text-black `}
@@ -142,17 +142,17 @@ const Navbar = ({
         <span className="md:hidden origin-center rotate-90 text-2xl">
           <i
             className={
-              isVisible ? "fi fi-br-cross text-[#ED7D3A]" : "fi fi-br-tally-4"
+              isMobileNavVisible ? "fi fi-br-cross text-[#ED7D3A]" : "fi fi-br-tally-4"
             }
-            onClick={handleIsVisible}
+            onClick={handleIsMobileNavVisible}
           ></i>
         </span>
       </nav>
-      {isVisible && (
+      {isMobileNavVisible && (
         <div
           className={`fixed right-0 flex flex-col text-right font-bold uppercase backdrop-blur-md bg-mintGreen/85 shadow text-white h-auto w-auto md:hidden transition-all duration-50 ease-in-out ${
             activeSection !== "Hero" ? "" : "text-gray-600 "
-          } ${isVisible ? "p-3 py-7 border-b border-l border-black" : ""}`}
+          } ${isMobileNavVisible ? "p-3 py-7 border-b border-l border-black" : ""}`}
         >
           <AnchorTagContainer />
         </div>

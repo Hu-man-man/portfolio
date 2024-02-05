@@ -12,14 +12,14 @@ export default function Home() {
   type Language = "fr" | "an";
 
   const [lang, setLang] = useState<Language>("fr");
-  const [isVisibleNav, setIsVisibleNav] = useState<boolean>(false);
+  const [isMobileNavVisible, setIsMobileNavVisible] = useState<boolean>(false);
 
   const handleSwitchLanguage = (selectedLang: Language): void => {
     setLang(selectedLang);
   };
 
-  const handleSetIsVisibleNav = (isVisibleNav: boolean) => {
-    setIsVisibleNav(isVisibleNav);
+  const handleSetIsMobileNavVisible = (isMobileNavVisible: boolean) => {
+    setIsMobileNavVisible(isMobileNavVisible);
   };
 
   const scrollToSection = (id: string) => {
@@ -46,7 +46,7 @@ export default function Home() {
           lang={lang}
           scrollToSection={scrollToSection}
           handleSwitchLanguage={handleSwitchLanguage}
-          sendDataToParent={handleSetIsVisibleNav}
+          sendDataToParent={handleSetIsMobileNavVisible}
         />
         <div className={`mainContent flex flex-col w-full items-center justify-center`}>
           <section
