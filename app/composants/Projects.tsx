@@ -13,6 +13,7 @@ type DescType = "trello" | "fdm" | "default";
 const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
   const [appDescription, setAppDescription] = useState<DescType | null>(null);
   const [projectsVisible, setProjectsVisible] = useState<boolean>(true);
+  const [imagesLoaded, setImagesLoaded] = useState<boolean>(false);
 
   const projectsData = [
     {
@@ -114,6 +115,7 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
                 height={300}
                 layout="responsive"
                 className="object-contain"
+                priority={true}
               />
               <div className="bg-[#ED7D3A]/70 backdrop-blur-sm rounded-xl inset-0 absolute flex flex-col justify-center items-center gap-6 text-white opacity-0 hover:opacity-100 transition ease-in-out duration-700">
                 <h2 className="text-2xl font-bold">{project.name}</h2>
