@@ -30,7 +30,7 @@ const ProjectModal = ({ project }: ProjectModalProps) => {
 
   return (
     <div className="relative">
-      <div onClick={handleOpenModal}>
+      <div onClick={handleOpenModal} >
         <PersonnalisedButton
           buttonText={
             <i className="text-3xl fi fi-br-zoom-in text-gray-600 cursor-pointer my-10"></i>
@@ -76,11 +76,13 @@ const ProjectModal = ({ project }: ProjectModalProps) => {
               <a
                 href={project.url}
                 target="_blank"
-                className="md:text-6xl text-lg font-bold"
+                className=""
                 onClick={handleCloseModal}
               >
-                LINK
-                <i className="fi fi-rr-link-alt"></i>
+                <PersonnalisedButton buttonText={<>Link
+                  <i className="fi fi-rr-link-alt"></i>
+                </>
+                  } />
               </a>
             </div>
           </div>

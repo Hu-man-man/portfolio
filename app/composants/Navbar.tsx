@@ -69,7 +69,7 @@ const Navbar = ({
 
   const AnchorTagContainer = () => (
     <>
-      <div className={`flex flex-col gap-5 md:flex-row md:items-center `}>
+      <div className={`flex flex-col gap-5 md:flex-row md:items-center`}>
         <div className={smoothEffect}>
           {renderSectionLink("skills", "Compétences", "Skills")}
         </div>
@@ -139,7 +139,7 @@ const Navbar = ({
             en
           </span>
         </div> */}
-        <span className="md:hidden origin-center rotate-90 text-2xl">
+        <span className="md:hidden origin-center cursor-pointer rotate-90 text-2xl">
           <i
             className={
               isMobileNavVisible ? "fi fi-br-cross text-[#ED7D3A]" : "fi fi-br-tally-4"
@@ -150,10 +150,9 @@ const Navbar = ({
       </nav>
       {isMobileNavVisible && (
         <div
-          className={`fixed right-0 flex flex-col text-right font-bold uppercase backdrop-blur-md bg-mintGreen/85 shadow text-white h-auto w-auto md:hidden transition-all duration-50 ease-in-out ${
-            activeSection !== "Hero" ? "" : "text-gray-600 "
-          } ${isMobileNavVisible ? "p-3 py-7 border-b border-l border-black" : ""}`}
-        >
+          className={`fixed right-0 flex flex-col text-right font-bold uppercase backdrop-blur-md bg-mintGreen/85 shadow text-white h-auto w-auto md:hidden transition-all duration-50 ease-in-out
+          ${isMobileNavVisible ? "p-3 py-7 border-b border-l border-black" : ""}`}
+          >
           <AnchorTagContainer />
         </div>
       )}
