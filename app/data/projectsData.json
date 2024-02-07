@@ -39,7 +39,7 @@
         "id": "x",
         "name": "\"Clone\" de X",
         "url": "https://x-like.vercel.app/",
-        "imageSrc": "/static/images/x.png",
+        "imageSrc": "/static/images/screen-x.png",
         "alt": "screenshot de l'application x",
         "description": "Application d'entrainement avec firebase.",
         "tags": "HTML / Tailwind / JavaScript / React / Next / Firestore Database / Firebase Auth"
