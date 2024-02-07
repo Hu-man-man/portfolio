@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Navbar from "./composants/Navbar";
+import Navbar from "./ui/Navbar";
 import Hero from "./composants/Hero";
 import Projects from "./composants/Projects";
 import Skills from "./composants/Skills";
