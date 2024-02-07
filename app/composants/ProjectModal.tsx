@@ -17,6 +17,7 @@ type ProjectModalProps = {
 
 const ProjectModal = ({ project }: ProjectModalProps) => {
   const [showModal, setShowModal] = useState(false);
+  const [isButtonClicked, setButtonClicked] = useState(false);
 
   const handleOpenModal = () => {
     setTimeout(() => {
@@ -28,9 +29,21 @@ const ProjectModal = ({ project }: ProjectModalProps) => {
     setShowModal(false);
   };
 
+  const handleButtonClick = (action: () => void) => {
+    if (!isButtonClicked) {
+      setButtonClicked(true);
+
+      setTimeout(() => {
+        handleCloseModal();
+        action();
+        setButtonClicked(false);
+      }, 200);
+    }
+  };
+
   return (
     <div className="relative">
-      <div onClick={handleOpenModal} >
+      <div onClick={handleOpenModal}>
         <PersonnalisedButton
           buttonText={
             <i className="text-3xl fi fi-br-zoom-in text-gray-600 cursor-pointer my-10"></i>
@@ -73,7 +86,21 @@ const ProjectModal = ({ project }: ProjectModalProps) => {
                 <h2>Technologies utilisées :</h2>
                 <p>{project.technologies}</p>
               </div>
-              <a
+              <div
+                onClick={() =>
+                  handleButtonClick(() => window.open(project.url, "_blank"))
+                }
+              >
+                <PersonnalisedButton
+                  buttonText={
+                    <>
+                      Link
+                      <i className="fi fi-rr-link-alt"></i>
+                    </>
+                  }
+                />
+              </div>
+              {/* <a
                 href={project.url}
                 target="_blank"
                 className=""
@@ -83,7 +110,7 @@ const ProjectModal = ({ project }: ProjectModalProps) => {
                   <i className="fi fi-rr-link-alt"></i>
                 </>
                   } />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
