@@ -100,17 +100,6 @@ const ProjectModal = ({ project }: ProjectModalProps) => {
                   }
                 />
               </div>
-              {/* <a
-                href={project.url}
-                target="_blank"
-                className=""
-                onClick={handleCloseModal}
-              >
-                <PersonnalisedButton buttonText={<>Link
-                  <i className="fi fi-rr-link-alt"></i>
-                </>
-                  } />
-              </a> */}
             </div>
           </div>
         </div>
