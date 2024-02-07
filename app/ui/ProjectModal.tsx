@@ -83,7 +83,7 @@ const ProjectModal = ({ project }: ProjectModalProps) => {
             <div className="flex flex-col md:w-2/3 px-3 md:pr-10 gap-10">
               <p>{project.description}</p>
               <div>
-                <h2>tags utilisées :</h2>
+                <h2>Technologies utilisées :</h2>
                 <p>{project.tags}</p>
               </div>
               <div
