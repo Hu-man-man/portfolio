@@ -1,5 +1,5 @@
 import Image from "next/image";
-import PersonnalisedButton from "./PersonnalisedButton";
+import PersonnalisedButton from "../ui/PersonnalisedButton";
 
 type HeroProps = {
   lang: "fr" | "an";

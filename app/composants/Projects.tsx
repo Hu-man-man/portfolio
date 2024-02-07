@@ -1,7 +1,8 @@
 import Image from "next/image";
 import { useState } from "react";
-import ProjectModal from "./ProjectModal";
-import PersonnalisedButton from "./PersonnalisedButton";
+import projectsData from "../data/projectsData.json"
+import ProjectModal from "../ui/ProjectModal";
+import PersonnalisedButton from "../ui/PersonnalisedButton";
 
 type ProjectsProps = {
   lang: "fr" | "an";
@@ -14,57 +15,6 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
   const [appDescription, setAppDescription] = useState<DescType | null>(null);
   const [projectsVisible, setProjectsVisible] = useState<boolean>(true);
   const [imagesLoaded, setImagesLoaded] = useState<boolean>(false);
-
-  const projectsData = [
-    {
-      id: "trello",
-      name: "Clone de Trello",
-      url: "https://trello-clone-nu-neon.vercel.app/",
-      imageSrc: "/static/images/screen-trello.png",
-      alt: "screenshot de l'application clone trello",
-      description:
-        "Application en React clone de Trello. Exercice d'entrainement avec la technologie TypeScript, et le glissé déposé",
-      technologies: "HTML / CSS / JavaScript / TypeScript",
-    },
-    {
-      id: "fdm",
-      name: "La ferme de Meyrenal",
-      url: "https://www.youtube.com/playlist?list=PLbaOVmckgD0P3bAD0lUh3JMLpL4Xlk4vT",
-      imageSrc: "/static/images/screen-LFDM.png",
-      alt: "screenshot de l'application la ferme de Meyreinal",
-      description:
-        "Application créée en collaboration avec Assen Iliev destinée à un permaculteur Ardéchois",
-      technologies: "HTML / CSS / JavaScript / React Native / Redux / Express / Expo / MongoDB / Bcrypt / Cloudinary",
-    },
-    {
-      id: "myMoviz",
-      name: "My Moviz",
-      url: "https://mymoviz-front-zeta.vercel.app/",
-      imageSrc: "/static/images/screen-mymoviz.png",
-      alt: "screenshot de l'application My Moviz",
-      description:
-        "Application en React pour le front-end et express pour le back-end. Exercice d'entrainement pour coder avec next.js, faire une interface adaptative et travailler avec une api",
-      technologies: "HTML / CSS / JavaScript / Next / React / Express",
-    },
-    {
-      id: "portfolio",
-      name: "Mon Portfolio",
-      url: "https://portfolio-mu-ten-80.vercel.app/",
-      imageSrc: "/static/images/screen-portfolio.png",
-      alt: "screenshot de l'application porfolio",
-      description: "Application sur laquelle vous êtes actuellement.",
-      technologies: "HTML / Tailwind / JavaScript / TypeScript / React / Next",
-    },
-    {
-      id: "x",
-      name: '"Clone" de X',
-      url: "https://x-like.vercel.app/",
-      imageSrc: "/static/images/x.png",
-      alt: "screenshot de l'application x",
-      description: "Application d'entrainement avec firebase.",
-      technologies: "HTML / Tailwind / JavaScript / React / Next / Firestore Database / Firebase Auth",
-    },
-  ];
 
   const handleDescription = (event: DescType) => {
     setAppDescription(event);
