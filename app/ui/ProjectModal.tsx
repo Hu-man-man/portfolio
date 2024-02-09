@@ -42,8 +42,12 @@ const ProjectModal = ({ project }: ProjectModalProps) => {
   };
 
   return (
-    <div className="relative">
-      <div onClick={handleOpenModal}>
+    <>
+      <div
+        className="bg-[#ED7D3A]/70 backdrop-blur-sm rounded-xl inset-0 absolute flex flex-col justify-center items-center gap-6 text-white opacity-0 hover:opacity-100 transition ease-in-out duration-700"
+        onClick={handleOpenModal}
+      >
+        <h2 className="text-2xl font-bold">{project.name}</h2>
         <PersonnalisedButton
           buttonText={
             <i className="text-3xl fi fi-br-zoom-in text-gray-600 cursor-pointer my-10"></i>
@@ -104,7 +108,7 @@ const ProjectModal = ({ project }: ProjectModalProps) => {
           </div>
         </div>
       </ReactModal>
-    </div>
+    </>
   );
 };
 
