@@ -38,7 +38,7 @@ const Contacts: React.FC<ContactsProps> = ({ lang, scrollToSection }) => {
         <div onClick={() => handleButtonClick(() => window.location.href = "mailto:jason.ricou@gmail.com")}>
           <PersonnalisedButton buttonText={<i className="fi fi-sr-envelope text-gray-600"></i>} label="Mail" />
         </div>
-        <div onClick={() => handleButtonClick(() => window.open("/static/CV-RicouJason.pdf", "_blank"))}>
+        <div onClick={() => handleButtonClick(() => window.open("/static/CV-JasonRicou.pdf", "_blank"))}>
           <PersonnalisedButton buttonText={<i className="fi fi-sr-file-user text-gray-600"></i>} label="Cv" />
         </div>
       </div>

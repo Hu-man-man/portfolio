@@ -13,6 +13,7 @@ const Skills = ({ lang }: SkillsProps) => {
     "Express",
     "Firebase",
     "Mongo",
+    "Angular 17"
   ];
   const softSkillsList = [
     "Curiosité",
