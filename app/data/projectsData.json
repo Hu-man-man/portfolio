@@ -1,12 +1,12 @@
 [
     {
-        "id": "trello",
-        "name": "Clone de Trello",
-        "url": "https://trello-clone-nu-neon.vercel.app/",
-        "imageSrc": "/static/images/screen-trello.png",
-        "alt": "screenshot de l'application clone trello",
-        "description": "Application en React clone de Trello. Exercice d'entrainement avec la technologie TypeScript, et le glissé déposé",
-        "tags": "HTML / CSS / JavaScript / TypeScript"
+        "id": "bibliocatalogue",
+        "name": "Bibliocatalogue",
+        "url": "https://bibliocatalogue.vercel.app/",
+        "imageSrc": "/static/images/screen-bibliocatalogue.png",
+        "alt": "screenshot de l'application Bibliocatalogue",
+        "description": "Application en Angular 17. Exercice d'entrainement.",
+        "tags": "HTML / Tailwind / JavaScript / TypeScript / Angular 17 / Angular Material / Firebase auth / Firestore"
     },
     {
         "id": "fdm",
@@ -16,6 +16,15 @@
         "alt": "screenshot de l'application la ferme de Meyreinal",
         "description": "Application créée en collaboration avec Assen Iliev destinée à un permaculteur Ardéchois",
         "tags": "HTML / CSS / JavaScript / React Native / Redux / Express / Expo / MongoDB / Bcrypt / Cloudinary"
+    },
+    {
+        "id": "trello",
+        "name": "Clone de Trello",
+        "url": "https://trello-clone-nu-neon.vercel.app/",
+        "imageSrc": "/static/images/screen-trello.png",
+        "alt": "screenshot de l'application clone trello",
+        "description": "Application en React clone de Trello. Exercice d'entrainement avec la technologie TypeScript, et le glissé déposé",
+        "tags": "HTML / CSS / JavaScript / TypeScript"
     },
     {
         "id": "myMoviz",

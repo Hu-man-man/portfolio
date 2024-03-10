@@ -22,11 +22,17 @@ const Hero = ({ lang, scrollToSection }: HeroProps) => {
       </div>
       <div className="flex flex-col items-center justify-center  gap-9 md:gap-20">
         <div className="text-center md:text-left">
-          <h1 className="font-bold text-3xl major">HEY,<br />je suis Jason</h1>
+          <h1 className="font-bold text-3xl major">
+            HEY,
+            <br />
+            je suis Jason
+          </h1>
           <br />
 
           <p className="font-bold text-xl md:3xl">
-            Développeur Full-Stack<br />Bienvenu·e·s sur mon portfolio.
+            Développeur Full-Stack
+            <br />
+            Bienvenu·e·s sur mon portfolio.
             <span className="major pl-2"></span>
           </p>
         </div>

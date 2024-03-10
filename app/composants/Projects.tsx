@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
-import projectsData from "../data/projectsData.json"
+import projectsData from "../data/projectsData.json";
 import ProjectModal from "../ui/ProjectModal";
 import PersonnalisedButton from "../ui/PersonnalisedButton";
 
@@ -21,7 +21,6 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
 
   const handleProjectsVisible = () => {
     setTimeout(() => {
-
       !projectsVisible && scrollToSection("projects");
       setProjectsVisible(!projectsVisible);
     }, 200);
@@ -65,7 +64,7 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
                 layout="responsive"
                 className="object-contain"
               />
-                <ProjectModal project={project} />
+              <ProjectModal project={project} />
             </div>
           ))}
       </div>

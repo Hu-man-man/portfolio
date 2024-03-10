@@ -56,8 +56,9 @@ const Navbar = ({
     return (
       <span
         onClick={() => {
-          scrollToSection(sectionId)
-          isMobileNavVisible && setIsMobileNavVisible(false)}}
+          scrollToSection(sectionId);
+          isMobileNavVisible && setIsMobileNavVisible(false);
+        }}
         className={`cursor-pointer mr-3 ${
           activeSection === sectionId ? "text-[#ED7D3A]" : "text-black"
         }`}
@@ -115,7 +116,10 @@ const Navbar = ({
         <div className={`hidden md:flex `}>
           <AnchorTagContainer />
         </div>
-        <div className='tracking-tighter text-2xl cursor-default opacity-0'>JSN</div> {/*Je triche là mais quand le choix de la langue sera mit en place tout sera rétabli */}
+        <div className="tracking-tighter text-2xl cursor-default opacity-0">
+          JSN
+        </div>{" "}
+        {/*Je triche là mais quand le choix de la langue sera mit en place tout sera rétabli */}
         {/* <div className={smoothEffect}>
           <span
             onClick={() => changeLanguage("fr")}
@@ -142,7 +146,9 @@ const Navbar = ({
         <span className="md:hidden origin-center cursor-pointer rotate-90 text-2xl">
           <i
             className={
-              isMobileNavVisible ? "fi fi-br-cross text-[#ED7D3A]" : "fi fi-br-tally-4"
+              isMobileNavVisible
+                ? "fi fi-br-cross text-[#ED7D3A]"
+                : "fi fi-br-tally-4"
             }
             onClick={handleIsMobileNavVisible}
           ></i>
@@ -150,9 +156,11 @@ const Navbar = ({
       </nav>
       {isMobileNavVisible && (
         <div
-          className={`fixed right-0 flex flex-col text-right font-bold uppercase backdrop-blur-md bg-mintGreen/85 shadow text-white h-auto w-auto md:hidden transition-all duration-50 ease-in-out
-          ${isMobileNavVisible ? "p-3 py-7 border-b border-l border-black" : ""}`}
-          >
+          className={`fixed right-0 flex flex-col text-right font-bold uppercase backdrop-blur-md bg-mintGreen/85 shadow text-white h-auto w-auto md:hidden
+          ${
+            isMobileNavVisible ? "p-3 py-7 border-b border-l border-black" : ""
+          }`}
+        >
           <AnchorTagContainer />
         </div>
       )}
