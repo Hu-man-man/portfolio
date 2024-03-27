@@ -27,15 +27,6 @@
         "tags": "HTML / CSS / JavaScript / TypeScript"
     },
     {
-        "id": "myMoviz",
-        "name": "My Moviz",
-        "url": "https://mymoviz-front-zeta.vercel.app/",
-        "imageSrc": "/static/images/screen-mymoviz.png",
-        "alt": "screenshot de l'application My Moviz",
-        "description": "Application en React pour le front-end et express pour le back-end. Exercice d'entrainement pour coder avec next.js, faire une interface adaptative et travailler avec une api",
-        "tags": "HTML / CSS / JavaScript / Next / React / Express"
-    },
-    {
         "id": "portfolio",
         "name": "Mon Portfolio",
         "url": "https://portfolio-mu-ten-80.vercel.app/",
@@ -52,5 +43,14 @@
         "alt": "screenshot de l'application x",
         "description": "Application d'entrainement avec firebase.",
         "tags": "HTML / Tailwind / JavaScript / React / Next / Firestore Database / Firebase Auth"
+    },
+    {
+        "id": "myMoviz",
+        "name": "My Moviz",
+        "url": "https://mymoviz-front-zeta.vercel.app/",
+        "imageSrc": "/static/images/screen-mymoviz.png",
+        "alt": "screenshot de l'application My Moviz",
+        "description": "Application en React pour le front-end et express pour le back-end. Exercice d'entrainement pour coder avec next.js, faire une interface adaptative et travailler avec une api",
+        "tags": "HTML / CSS / JavaScript / Next / React / Express"
     }
 ]
