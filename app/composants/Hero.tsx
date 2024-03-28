@@ -1,6 +1,7 @@
 import Image from "next/image";
 import PersonnalisedButton from "../ui/PersonnalisedButton";
 
+
 type HeroProps = {
   lang: "fr" | "an";
   scrollToSection: (id: string) => void;

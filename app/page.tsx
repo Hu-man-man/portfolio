@@ -6,6 +6,7 @@ import Hero from "./composants/Hero";
 import Projects from "./composants/Projects";
 import Skills from "./composants/Skills";
 import Contacts from "./composants/Contacts";
+import AnimatedBackground from "./ui/AnimatedBackground";
 
 
 export default function Home() {
@@ -40,8 +41,10 @@ export default function Home() {
 
   return (
     <main>
+      <div className="fixed -z-10">
+        < AnimatedBackground />
+      </div>
       <div>
-        
         <Navbar
           lang={lang}
           scrollToSection={scrollToSection}
