@@ -41,7 +41,7 @@ export default function Home() {
 
   return (
     <main>
-      <div className="fixed -z-10">
+      <div className="hidden sm:block fixed -z-10">
         < AnimatedBackground />
       </div>
       <div>
