@@ -6,7 +6,7 @@ const App: React.FC = () => {
   useEffect(() => {
     const newStyles: CSSProperties[] = [];
     for (let i = 0; i < 15; i++) {
-      const left = `${Math.floor(Math.random() * 100)}vw`; // Position aléatoire sur l'axe horizontal
+      const left = `${Math.floor(Math.random() * 100)}vw`;
       const size = `${Math.floor(Math.random() * 40) + 60}px`; // Taille aléatoire entre 40px - 100px
       const delay = `${Math.floor(Math.random() * 25)}s`; // Délai d'animation aléatoire
       newStyles.push({
