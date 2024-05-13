@@ -20,6 +20,7 @@ const Contacts: React.FC<ContactsProps> = ({ lang, scrollToSection }) => {
     }
   };
 
+
   return (
     <div className="flex flex-col items-center justify-center gap-16">
       <div
@@ -38,7 +39,7 @@ const Contacts: React.FC<ContactsProps> = ({ lang, scrollToSection }) => {
         <div onClick={() => handleButtonClick(() => window.location.href = "mailto:jason.ricou@gmail.com")}>
           <PersonnalisedButton buttonText={<i className="fi fi-sr-envelope text-gray-600"></i>} label="Mail" />
         </div>
-        <div onClick={() => handleButtonClick(() => window.open("/static/CV-JasonRicou.pdf", "_blank"))}>
+        <div onClick={() => handleButtonClick(() => window.open("/static/CV_JasonRICOU.pdf", "_blank"))}>
           <PersonnalisedButton buttonText={<i className="fi fi-sr-file-user text-gray-600"></i>} label="Cv" />
         </div>
       </div>

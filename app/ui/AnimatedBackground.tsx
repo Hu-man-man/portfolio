@@ -8,7 +8,7 @@ const App: React.FC = () => {
     for (let i = 0; i < 15; i++) {
       const left = `${Math.floor(Math.random() * 100)}vw`;
       const size = `${Math.floor(Math.random() * 40) + 60}px`; // Taille aléatoire entre 40px - 100px
-      const delay = `${Math.floor(Math.random() * 25)}s`; // Délai d'animation aléatoire
+      const delay = `${(Math.random() * 25)}s`; // Délai d'animation aléatoire
       newStyles.push({
         position: 'fixed',
         left,
@@ -50,4 +50,5 @@ const App: React.FC = () => {
 };
 
 export default App;
+
 
