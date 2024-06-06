@@ -9,6 +9,15 @@
         "tags": "HTML / Tailwind / JavaScript / TypeScript / Angular 17 / Angular Material / Firebase auth / Firestore"
     },
     {
+        "id": "tamagotchat",
+        "name": "Tamagotchat",
+        "url": "https://hu-man-man.github.io/Tamagotchat/",
+        "imageSrc": "/static/images/screen-tamagotchat.png",
+        "alt": "screenshot de l'application TamagotChat",
+        "description": "Application en Vue.js dans le style d'un Tamagotchi. Exercice d'entrainement avec la technologie Vue.js",
+        "tags": "HTML / CSS / Vue.js"
+    },
+    {
         "id": "fdm",
         "name": "La ferme de Meyrenal",
         "url": "https://www.youtube.com/playlist?list=PLbaOVmckgD0P3bAD0lUh3JMLpL4Xlk4vT",
@@ -18,15 +27,6 @@
         "tags": "HTML / CSS / JavaScript / React Native / Redux / Express / Expo / MongoDB / Bcrypt / Cloudinary"
     },
     {
-        "id": "trello",
-        "name": "Clone de Trello",
-        "url": "https://trello-clone-nu-neon.vercel.app/",
-        "imageSrc": "/static/images/screen-trello.png",
-        "alt": "screenshot de l'application clone trello",
-        "description": "Application en React clone de Trello. Exercice d'entrainement avec la technologie TypeScript, et le glissé déposé",
-        "tags": "HTML / CSS / JavaScript / TypeScript"
-    },
-    {
         "id": "portfolio",
         "name": "Mon Portfolio",
         "url": "https://portfolio-mu-ten-80.vercel.app/",
@@ -34,6 +34,15 @@
         "alt": "screenshot de l'application porfolio",
         "description": "Application sur laquelle vous êtes actuellement.",
         "tags": "HTML / Tailwind / JavaScript / TypeScript / React / Next"
+    },
+    {
+        "id": "trello",
+        "name": "Clone de Trello",
+        "url": "https://trello-clone-nu-neon.vercel.app/",
+        "imageSrc": "/static/images/screen-trello.png",
+        "alt": "screenshot de l'application clone trello",
+        "description": "Application en React clone de Trello. Exercice d'entrainement avec la technologie TypeScript, et le glissé déposé",
+        "tags": "HTML / CSS / JavaScript / TypeScript"
     },
     {
         "id": "x",

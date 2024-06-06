@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import projectsData from "../data/projectsData.json";
 import ProjectModal from "../ui/ProjectModal";
 import PersonnalisedButton from "../ui/PersonnalisedButton";
@@ -14,6 +14,24 @@ type DescType = "trello" | "fdm" | "default";
 const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
   const [appDescription, setAppDescription] = useState<DescType | null>(null);
   const [projectsVisible, setProjectsVisible] = useState<boolean>(true);
+  const [projectsToShow, setProjectsToShow] = useState<number>(2);
+
+  useEffect(() => {
+    const updateProjectsToShow = () => {
+      if (window.innerWidth >= 768) {
+        setProjectsToShow(4);
+      } else {
+        setProjectsToShow(2);
+      }
+    };
+
+    updateProjectsToShow(); // Set initial value
+    window.addEventListener("resize", updateProjectsToShow);
+
+    return () => {
+      window.removeEventListener("resize", updateProjectsToShow);
+    };
+  }, []);
 
   const handleDescription = (event: DescType) => {
     setAppDescription(event);
@@ -49,7 +67,7 @@ const Projects = ({ lang, scrollToSection }: ProjectsProps) => {
       </div>
       <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-5 ">
         {projectsData
-          .slice(0, projectsVisible ? 2 : projectsData.length)
+          .slice(0, projectsVisible ? projectsToShow : projectsData.length)
           .map((project) => (
             <div
               key={project.id}
